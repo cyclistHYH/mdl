@@ -1,0 +1,41 @@
+<!--pages/exchangeDetails/exchangeDetails.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class='container'>
+  <view class='exchangeTop'>
+    <view class='exchangeTopTitle'>我的面膜</view>
+    <view class='exchangeTopNum'>{{incomeInfo.integral}}</view>
+    <button class='toExchange' bindtap='toExchange'>兑换面膜</button>
+  </view>
+  <view class='exchangeInfo'>
+    <view class='exchangeInfoBox'>
+      <view class='exchangeInfoTxt'>累计面膜</view>
+      <view class='exchangeInfoNum'>{{incomeInfo.integral_sum}}</view> 
+    </view>
+    <view class='exchangeInfoLine'></view>
+    <view class='exchangeInfoBox'>
+      <view class='exchangeInfoTxt'>累计兑换</view>
+      <view class='exchangeInfoNum'>{{incomeInfo.integral_used}}</view>
+    </view>
+  </view>
+  <view class='exchangeDescription' bindtap='toShow'>
+    <image class='exchangeDescriptionImg' src='/images/exchangeDescription.png' />
+    <text class='exchangeDescriptionTxt'>兑换说明</text>
+    <image class='exchangeDescriptionArrow' src='/images/arrowRight.png' />
+  </view>
+</view>
+
+
+<view class='popUpBk' hidden='{{isShow}}'></view>
+<view class='popUp' hidden='{{isShow}}'>
+  <view class='popUpTop'>VIP说明</view> 
+  <template is="wxParse" data="{{wxParseData:description.nodes}}"/>
+  <image class='toClose' catchtap='toClose' src='/images/close1.png' />
+</view>
+
+<view class='popUpBk' hidden='{{isRemind}}'></view>
+<view class='remind' hidden='{{isRemind}}'>
+  <view class='popUpTop'>提醒！</view> 
+  <view class='remindCon'>由于您目前积累积分未达到兑换数额，暂时无法兑换面膜，每满1盒面膜即可申请兑换（5积分为单位领取面膜1盒）。</view>
+  <image class='toClose' catchtap='toCloseRemind' src='/images/close1.png' />
+</view>

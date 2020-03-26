@@ -1,0 +1,175 @@
+/* pages/evaluation/evaluation.wxss */
+.container {
+  padding-top: 18rpx;
+}
+
+.star {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 18rpx;
+}
+
+.starTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 100rpx;
+  color: #000000;
+}
+
+.starBox {
+  position: relative;
+  float: left;
+  width: 360rpx;
+  height: 46rpx;
+  margin-left: 40rpx;
+}
+
+.starBox image {
+  float: left;
+  width: 48rpx;
+  height: 46rpx;
+  margin-right: 24rpx;
+  margin-top: 27rpx;
+}
+
+.starUnselected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+
+.starSelected {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+.evaluation {
+  width: 100%;
+  height: 696rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 80rpx;
+}
+
+.evaluationInpBox {
+  width: 100%;
+  height: 394rpx;
+}
+
+.evaluationInpTxt {
+  float: left;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #333;
+  padding-top: 22rpx;
+}
+
+.evaluationInp {
+  float: right;
+  width: 632rpx;
+  height: 364rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  border: 1rpx solid #e6e6e6;
+  border-radius: 8rpx;
+  margin-top: 30rpx;
+  padding: 14rpx 28rpx;
+  box-sizing: border-box;
+}
+
+.uploadPicture {
+  width: 100%;
+  height: 140rpx;
+  margin-top: 42rpx;
+}
+
+.uploadPictureTxt {
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #333;
+}
+
+.uploadPictureBox {
+  float: right;
+  width: 632rpx;
+  height: 100%;
+}
+
+.uploadPictureBtn {
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+}
+
+.uploadPictureShow {
+  position: relative;
+  float: left;
+  width: 140rpx;
+  height: 140rpx;
+  margin-right: 20rpx;
+}
+
+.uploadPictureShow:last-child {
+  margin-right: 0;
+}
+
+.uploadPictureShowImg {
+  display: block;
+  width: 140rpx;
+  height: 140rpx;
+  border-radius: 6rpx;
+}
+
+.closeBtn {
+  position: absolute;
+  top: -10rpx;
+  right: -8rpx;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 100;
+}
+
+.chooseBox {
+  width: 100%;
+  height: 36rpx;
+  margin-top: 44rpx;
+}
+
+.choose {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  border: 4rpx solid #d2d2d2;
+  border-radius: 50%;
+}
+
+.choose.active {
+  border: none;
+  background: url(https://ssl.ygwl.xin/xuan.png) no-repeat;
+  background-size: cover;
+}
+
+.chooseTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999999;
+  margin-left: 28rpx;
+}
+
+.confirmBtn {
+  width: 710rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  background-color: #d91e2d;
+  color: #fff;
+  border-radius: 4rpx;
+  margin: 0 auto;
+}

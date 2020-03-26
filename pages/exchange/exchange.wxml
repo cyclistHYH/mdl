@@ -1,0 +1,29 @@
+<!--pages/exchange/exchange.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class='container'>
+  <view class='exchangeTop'>
+    <image class='exchangeBk' src='/images/exchangeBk.jpg' />
+    <view class='exchangeTopCon'>
+      <image class='exchangeAvatar' src='{{avatar}}' />
+      <view class='nickname'>{{nickName}}</view>
+    </view>
+  </view>
+  <view class='exchangeDescription' bindtap='toShow'>
+    <image class='exchangeDescriptionImg' src='/images/exchangeDescription.png' />
+    <text class='exchangeDescriptionTxt'>兑换说明</text>
+    <image class='exchangeDescriptionArrow' src='/images/arrowRight.png' />
+  </view>
+  <navigator class='exchangeBox' wx:for="{{exchangeList}}" hover-class='none' url='/pages/exchangeDetails/exchangeDetails' wx:key="{{index}}">
+    <image class='exchangeImg' src='/images/exchangeImg.png' />
+    <text class='exchangeTxt'>{{item.name}}</text>
+    <image class='exchangeArrow' src='/images/arrowRight.png' />
+  </navigator>
+</view>
+
+<view class='popUpBk' hidden='{{isShow}}'></view>
+<view class='popUp' hidden='{{isShow}}'>
+  <view class='popUpTop'>VIP说明</view> 
+  <template is="wxParse" data="{{wxParseData:description.nodes}}"/>
+  <image class='toClose' catchtap='toClose' src='/images/close1.png' />
+</view>

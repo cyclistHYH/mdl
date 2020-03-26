@@ -1,0 +1,66 @@
+/* pages/authorize/authorize.wxss */
+page{
+    height: 100%;
+}
+.container{
+    background-color: #fafafa;
+    justify-content: initial;
+    min-height: 100%;
+}
+
+.authorizeLogo {
+  display: block;
+  width: 100%;
+  height: 260rpx;
+}
+
+.authorizeTxt {
+  width: 100%;
+  font-size: 34rpx;
+  line-height: 70rpx;
+  text-align: center;
+  color: #5d5d5d;
+  margin-top: 120rpx;
+}
+
+.authorizeTit {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 66rpx;
+  text-align: center;
+  color: #8c8c8c;
+}
+
+.authorizeTit view {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 8rpx;
+}
+
+.authorizeBtn {
+  display: block;
+  width: 628rpx;
+  height: 88rpx;
+  font-size: 34rpx;
+  line-height: 88rpx;
+  color: #fff;
+  background-color: #00bf00;
+  margin: 86rpx auto 0;
+}
+
+.authorizeBtn::after {
+  border: none;
+}
+
+.cancelBtn {
+  display: block;
+  width: 628rpx;
+  height: 88rpx;
+  font-size: 34rpx;
+  line-height: 88rpx;
+  color: #fff;
+  background-color: #fd0113;
+  margin: 32rpx auto 0;
+  border-radius: 10rpx;
+  text-align: center;
+}

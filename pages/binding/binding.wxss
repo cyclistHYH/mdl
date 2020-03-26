@@ -1,0 +1,141 @@
+/* pages/binding/binding.wxss */
+.container {
+  min-height: 100vh;
+}
+
+.bindingBk {
+  display: block;
+  width: 100%;
+  height: 530rpx;
+}
+
+.bindingContent {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+.bindingLogo {
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  margin-top: 146rpx;
+  margin-bottom: 78rpx;
+}
+
+.invitedBox {
+  width: 100%;
+  height: 324rpx;
+  padding-top: 40rpx;
+}
+
+.invitedAvatar {
+  display: block;
+  width: 132rpx;
+  height: 132rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+}
+
+.invitedName {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 58rpx;
+  text-align: center;
+  color: #fff;
+  margin-top: 16rpx;
+}
+
+.invitedTxt {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 52rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.bindingMain {
+  width: 710rpx;
+  height: 864rpx;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 8rpx;
+  padding: 100rpx 72rpx 0;
+}
+
+.bindingInpBox {
+  width: 100%;
+  height: 76rpx;
+  border-bottom: 2rpx solid #999999;
+  margin-bottom: 74rpx;
+}
+
+.bindingImg {
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 16rpx;
+}
+
+.bindingInp {
+  float: left;
+  width: 372rpx;
+  height: 100%;
+  font-size: 30rpx;
+  line-height: 74rpx;
+  color: #333;
+  padding-left: 12rpx;
+  box-sizing: border-box;
+}
+
+.codeBtn {
+  float: right;
+  font-size: 30rpx;
+  line-height: 74rpx;
+  color: #00adfe;
+  padding: 0;
+  background-color: inherit;
+}
+
+.codeBtn::after {
+  border: none;
+}
+
+.codeBtn[disabled] {
+  background-color: inherit !important;
+  color: #00adfe !important;
+}
+
+.bindingPlaceholder {
+  font-size: 30rpx;
+  line-height: 74rpx;
+  color: #999999;
+}
+
+.bindingBtn {
+  display: block;
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #d91e2d;
+  border-radius: 4rpx;
+  margin-top: 30rpx;
+}
+
+.toBack {
+  display: block;
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 78rpx;
+  border-radius: 4rpx;
+  text-align: center;
+  color: #d91e2d;
+  box-sizing: border-box;
+  border: 1rpx solid #d91e2d;
+  margin-top: 42rpx;
+}

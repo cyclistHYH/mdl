@@ -1,0 +1,318 @@
+/* pages/myOrder/myOrder.wxss */
+.container {
+  padding: 26rpx 20rpx 0;
+}
+
+.orderNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  padding: 26rpx 20rpx 0;
+  height: 90rpx;
+  background-color: #f1f0f2;
+}
+
+.orderNavList {
+  width: 100%;
+  height: 100%;
+  white-space: nowrap;
+}
+
+.orderNavBox {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 60rpx;
+  padding: 0 12rpx;
+  margin-right: 48rpx;
+  border-bottom: 4rpx solid #f1f0f2;
+  color: #333333;
+}
+
+.orderNavBox.active {
+  border-color: #e01212;
+  color: #e01212;
+}
+
+.orderNavBox:last-child {
+  margin-right: 0;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  padding-top: 88rpx;
+}
+
+.orderBox {
+  width: 100%;
+  height: auto;
+  border-radius: 6rpx;
+  background-color: #fff;
+  padding: 0 20rpx 40rpx;
+  margin-bottom: 20rpx;
+  box-sizing: border-box;
+}
+
+.orderTop {
+  width: 100%;
+  height: 88rpx;
+}
+
+.orderTopTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  color: #333;
+}
+
+.orderStatus {
+  float: right;
+  font-size: 24rpx;
+  line-height: 88rpx;
+  color: #fe6502;
+}
+
+.orderInfo {
+  position: relative;
+  width: 100%;
+  height: 178rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderImg {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  overflow: hidden;
+  border-radius: 6rpx;
+  margin-top: 6rpx;
+}
+
+.orderImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.orderInfoCon {
+  float: left;
+  width: 492rpx;
+  height: 100%;
+  padding-left: 24rpx;
+}
+
+.orderTitle {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #1f1f20;
+  margin-bottom: 10rpx;
+}
+
+.orderLabelBox {
+  width: 100%;
+  height: 46rpx;
+  margin-bottom: 22rpx;
+}
+
+.orderLabel {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+  margin-bottom: 22rpx;
+}
+
+.orderLabel1 {
+  float: left;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+}
+
+.orderPriceBox {
+  width: 100%;
+  height: 30rpx;
+}
+
+.orderPrice {
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.orderPrice1 {
+  width: 300rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.orderNumber {
+  float: right;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999999;
+}
+
+.orderNumber1 {
+  float: right;
+  font-size: 24rpx;
+  line-height: 46rpx;
+  color: #999999;
+}
+
+.orderTotal {
+  width: 100%;
+  height: 48rpx;
+  margin-top: 18rpx;
+}
+
+.orderTotal text {
+  float: right;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #999999;
+}
+
+.orderTotal .orderTotalPrice {
+  color: #e22e2e;
+  margin-left: 20rpx;
+}
+
+.orderBtn {
+  position: relative;
+  width: 100%;
+  height: 60rpx;
+  margin-top: 36rpx;
+}
+
+.orderBtn button {
+  float: right;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  border-radius: 8rpx;
+}
+
+.remindBtn {
+  width: 218rpx;
+  height: 60rpx;
+  color: #fff;
+  background-color: #e01212;
+  z-index: 100;
+}
+
+.confirmBtn {
+  width: 176rpx;
+  height: 60rpx;
+  color: #fff;
+  background-color: #e01212;
+  margin-left: 32rpx;
+}
+
+.evaluationBtn {
+  position: absolute;
+  right: 0;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+  bottom: 20rpx;
+  width: 106rpx;
+  height: 40rpx;
+  color: #fff;
+  background-color: #e01212;
+  z-index: 1000;
+}
+
+.evaluationBtn.active {
+  color: #7f7f7f;
+  border: 1rpx solid #7e7e7e;
+  line-height: 58rpx;
+}
+
+.orderBtn .serviceBtn {
+  width: 176rpx;
+  height: 60rpx;
+  border: 1rpx solid #e01212;
+  line-height: 58rpx;
+  color: #e01212;
+  margin-left: 32rpx;
+}
+
+.orderBtn .logisticsBtn {
+  width: 176rpx;
+  height: 60rpx;
+  border: 1rpx solid #7e7e7e;
+  color: #7f7f7f;
+  line-height: 58rpx;
+}
+
+.popUpBk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 444rpx;
+  margin-top: -222rpx;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.popUpTop {
+  width: 100%;
+  height: 158rpx;
+  font-size: 36rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4303);
+}
+
+.popUpTxt {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 130rpx;
+  color: #000;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.contact {
+  display: block;
+  width: 330rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #e01212;
+}
+
+.toClose {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 1100;
+}

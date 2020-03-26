@@ -1,0 +1,32 @@
+<!--pages/myComment/myComment.wxml-->
+<view class='container'>
+  <view class='myCommentTop'>我的全部评论</view>
+  <view class='commentBox' wx:for="{{comment}}" wx:key="{{index}}">
+    <view class='commentTop'>
+      <image class='commentAvatar' src='/images/avatar.png' />
+      <text class='commentName'>{{item.nikename}}</text>
+    </view>
+    <view class='commemtTimeBox'>
+      <text>{{item.evaluate_time}}</text>
+      <text>{{item.content}}</text>
+    </view>
+    <view class='commentCon'>{{item.evaluate_content}}</view>
+    <view class='productInfo'>
+      <image class='productImg' src='{{pathHeader+item.thumbnail}}' />
+      <view class='productInfoCon'>
+        <view class='orderTitle'>{{item.product_name}}</view>
+        <view class='orderLabel'>{{item.content}}</view>
+        <view class='orderPrice'>￥{{item.product_price}}</view>
+      </view>
+    </view>
+    <view class='commentImg clearfix'>
+        <block wx:for="{{item.evaluate_img}}" wx:key='{{index}}' wx:for-item="evaluate_img">
+          <image src='{{pathHeader+evaluate_img}}' bindtap='previewImg' data-index='{{index}}' data-src='{{item.evaluate_img}}' />
+        </block>
+      </view>
+    <!-- <view class='commentBottom'> -->
+      <!-- <text class='commentBrowse'>浏览0次</text> -->
+      <!-- <text class='commentPraise'>已好评</text> -->
+    <!-- </view> -->
+  </view>
+</view>

@@ -1,0 +1,6 @@
+<!--pages/failure/failure.wxml-->
+<view class='container'>
+  <image class='failureBk' src='/images/failure.jpg' />
+  <text class='failureTxt'>本次订单支付失败！</text>
+  <navigator class='toBack' hover-class='none' open-type='switchTab' url='/pages/index/index'>返回首页</navigator>
+</view>

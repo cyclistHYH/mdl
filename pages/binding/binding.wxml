@@ -1,0 +1,31 @@
+<!--pages/binding/binding.wxml-->
+<view class='container'>
+  <image class='bindingBk' src='/images/bindingBk.jpg' />
+  <view class='bindingContent'>
+    <image class='bindingLogo' wx:if='{{!isInvited}}' src='/images/bindingLogo.png' />
+    <view class='invitedBox' wx:if="{{isInvited}}">
+      <image class='invitedAvatar' src='/images/avatar.png' />
+      <view class='invitedName'>迪丽热巴</view>
+      <view class='invitedTxt'>邀请您加入曼迪拉</view>
+    </view>
+    <view class='bindingMain'>
+      <form bindsubmit='toBinding'>
+        <view class='bindingInpBox'>
+          <image class='bindingImg' src='/images/bindingImg1.png' />
+          <input class='bindingInp' bindinput="phoneInp" placeholder='请输入手机号码' type='number' placeholder-class='bindingPlaceholder' name='phone'></input>
+        </view>
+        <view class='bindingInpBox'>
+          <image class='bindingImg' src='/images/bindingImg2.png' />
+          <input class='bindingInp' placeholder='请输入验证码' placeholder-class='bindingPlaceholder' name='verificationCode'></input>
+          <button class='codeBtn' bindtap='getCode' disabled='{{codeDisabled}}'>{{codeName}}</button>
+        </view>
+        <view class='bindingInpBox' wx:if="{{!isInvited}}">
+          <image class='bindingImg' src='/images/bindingImg3.png' />
+          <input class='bindingInp' placeholder='请输入推荐码' placeholder-class='bindingPlaceholder' name='invitationCode'></input>
+        </view>
+        <button class='bindingBtn' form-type='submit' hover-class='none'>立即绑定</button>
+        <navigator class='toBack' hover-class='none' open-type='switchTab' url='/pages/index/index'>返回首页></navigator>
+      </form>
+    </view>
+  </view>
+</view>

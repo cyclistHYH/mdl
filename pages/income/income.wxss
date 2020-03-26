@@ -1,0 +1,250 @@
+/* pages/income/income.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.incomeTop {
+  width: 100%;
+  height: 408rpx;
+  background: linear-gradient(to right,#e01212,#fd4303);
+  padding-top: 78rpx;
+}
+
+.incomeTitle {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.incomeNumber {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 72rpx;
+  margin-top: 12rpx;
+  overflow: visible;
+}
+
+.incomeNumberTxt {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #fff;
+  overflow: visible;
+}
+
+.incomeNumberCon {
+  font-size: 72rpx;
+  height: 72rpx;
+  color: #fff;
+  overflow: visible;
+}
+
+.toWithdraw {
+  display: block;
+  width: 260rpx;
+  height: 64rpx;
+  font-size: 28rpx;
+  line-height: 64rpx;
+  border-radius: 32rpx;
+  background-color: #fff;
+  color: #e31810;
+  margin-top: 62rpx;
+}
+
+.exchangeInfo {
+  width: 100%;
+  height: 108rpx;
+  padding: 0 20rpx;
+  margin-top: 28rpx;
+  margin-bottom: 28rpx;
+}
+
+.exchangeInfoBox {
+  float: left;
+  width: 354rpx;
+  height: 100%;
+}
+
+.exchangeInfoLine {
+  float: left;
+  width: 2rpx;
+  height: 100%;
+  background-color: #e01212;
+}
+
+.exchangeInfoTxt {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: #999999;
+}
+
+.exchangeInfoNum {
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 54rpx;
+  margin-top: 6rpx;
+  text-align: center;
+  color: #333;
+}
+
+.incomeBox {
+  width: 100%;
+  height: 100rpx;
+  box-sizing: border-box;
+  border-bottom: 2rpx solid #e5e5e5;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.incomeImg {
+  float: left;
+  width: 38rpx;
+  height: 42rpx;
+  margin-top: 28rpx;
+  margin-right: 4rpx;
+}
+
+.descriptionImg {
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 28rpx;
+}
+
+
+.incomeTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 98rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.incomeArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 37rpx;
+}
+
+.popUpBk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.popUpTop {
+  width: 100%;
+  height: 158rpx;
+  font-size: 36rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4303);
+}
+
+.toClose {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 1100;
+}
+
+.remind {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 448rpx;
+  margin-top: -224rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  z-index: 1000;
+}
+
+/* .remindCon {
+  width: 100%;
+  height: 290rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #000;
+  padding: 80rpx 76rpx 0;
+} */
+
+.withdraw {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 474rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  z-index: 1000;
+  margin-top: -237rpx;
+}
+
+.withdrawTop {
+  position: relative;
+  width: 100%;
+  height: 158rpx;
+}
+
+.withdrawBk {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.withdrawTopCon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  font-size: 36rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.withdrawCon {
+  width: 100%;
+  height: 316rpx;
+  padding: 0 20rpx;
+}
+
+.withdrawBox {
+  width: 100%;
+  height: 156rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.withdrawImg {
+  float: left;
+  width: 50rpx;
+  height: 46rpx;
+  margin-top: 55rpx;
+}
+
+.withdrawBox text {
+  float: left;
+  font-size: 30rpx;
+  line-height: 156rpx;
+  color: #000;
+  margin-left: 20rpx;
+}
+
+.withdrawArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 66rpx;
+}

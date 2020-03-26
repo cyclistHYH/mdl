@@ -1,0 +1,24 @@
+<!--pages/logistics/logistics.wxml-->
+<view class='container'>
+  <view class='logisticsTitle'>订单跟踪</view>
+  <view class='logistics'>
+    <view class='logisticsBox clearfix' wx:key='*this' wx:for-items='{{address}}'>
+      <view class='logisticsTime'></view>
+      <image class='logisticsImg' src='{{item.img}}'></image>
+      <view class='logisticsInfo'>
+        <view class="logisticsStatus {{item.isColor?'color':'' }}">[收货地址]{{item.content}}</view>
+      </view>
+      <view class='logisticsLine'></view>
+    </view>
+    <view class='logisticsBox clearfix' wx:key='*this' wx:for-items='{{logistics}}'>
+      <view class='logisticsTime'>
+        <view class='logisticsTimeDay'>{{item.time}}</view>
+      </view>
+      <view class="logisticsPoint {{index==0? 'active': ''}}"></view>
+      <view class='logisticsInfo'>
+        <view class="logisticsTxt {{index==0?'color':'' }}">{{item.context}}</view>
+      </view>
+      <view class='logisticsLine'></view>
+    </view>
+  </view>
+</view>

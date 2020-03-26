@@ -1,0 +1,468 @@
+/* pages/orderDetails/orderDetails.wxss */
+.container {
+  padding-bottom: 100rpx;
+}
+
+.orderDetailsTop {
+  width: 100%;
+  height: 158rpx;
+  background: linear-gradient(to right,#e01212,#fd4303);
+  padding: 30rpx 20rpx 0;
+  margin-bottom: 10rpx
+}
+
+.orderStatus {
+  width: 100%;
+  height: 54rpx;
+  font-size: 30rpx;
+  line-height: 54rpx;
+  color: #fff;
+}
+
+.orderStatus1 {
+  width: 100%;
+  height: 98rpx;
+  font-size: 30rpx;
+  line-height: 98rpx;
+  color: #fff;
+}
+
+.orderDelivery {
+  width: 100%;
+  height: 48rpx;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #fff;
+}
+
+.orderDelivery text {
+  float: left;
+}
+
+.orderDelivery text:last-child {
+  margin-left: 46rpx;
+}
+
+.logistics {
+  width: 100%;
+  height: auto;/*148*/
+  background-color: #fff;
+  margin-bottom: 10rpx;
+  padding: 0 20rpx 20rpx;
+  box-sizing: border-box;
+}
+
+.logisticsImg {
+  float: left;
+  width: 52rpx;
+  height: 52rpx;
+  margin-top: 28rpx;
+}
+
+.logisticsInfo {
+  float: left;
+  width: 620rpx;
+  height: auto;
+  padding-top: 10rpx;
+  padding-left: 20rpx;
+}
+
+.logisticsTitle {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #e01212;
+  margin-top: 26rpx;
+  margin-bottom: 14rpx;
+}
+
+.logisticsTime {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #999999;
+}
+
+.logisticsArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 42rpx;
+}
+
+.addressBox {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 10rpx;
+}
+
+.addressImg {
+  float: left;
+  width: 52rpx;
+  height: 52rpx;
+  margin-top: 28rpx;
+}
+
+.addressInfo {
+  float: left;
+  width: 650rpx;
+  height: auto;
+  padding: 28rpx 0 24rpx 20rpx;
+}
+
+.addressInfoTop {
+  width: 100%;
+  height: 50rpx; 
+  margin-bottom: 4rpx;
+}
+
+.addressName {
+  float: left;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  color: #333333;
+}
+
+.addressTel {
+  float: left;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  color: #7f7e7e;
+  margin-left: 36rpx;
+}
+
+.addressCon {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #7f7e7e;
+}
+
+.productBox {
+  width: 100%;
+  min-height: 236rpx;
+  background-color: #fff;
+  padding: 26rpx 20rpx 10rpx;
+  border-bottom: 2rpx solid #efefef;
+}
+
+.orderInfo {
+  position: relative;
+  width: 100%;
+  height: 178rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderImg {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  overflow: hidden;
+  border-radius: 6rpx;
+  margin-top: 6rpx;
+}
+
+.orderImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.orderInfoCon {
+  float: left;
+  width: 538rpx;
+  height: 100%;
+  padding-left: 24rpx;
+}
+
+.orderTitle {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #1f1f20;
+  margin-bottom: 10rpx;
+}
+
+.orderLabelBox {
+  width: 100%;
+  height: 46rpx;
+  margin-bottom: 22rpx;
+}
+
+.orderLabel {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+  margin-bottom: 22rpx;
+}
+
+.orderLabel1 {
+  float: left;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+}
+
+.orderPriceBox {
+  width: 100%;
+  height: 30rpx;
+}
+
+.orderPrice {
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.orderPrice1 {
+  width: 300rpx;
+  height: 30rpx;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.orderNumber {
+  float: right;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999999;
+}
+
+.orderNumber1 {
+  float: right;
+  font-size: 24rpx;
+  line-height: 46rpx;
+  color: #999999;
+}
+
+.orderInfoBox {
+  width: 100%;
+  height: 148rpx;
+  background-color: #fff;
+  padding: 20rpx 20rpx 0;
+}
+
+.freightBox {
+  width: 100%;
+  height: 64rpx;
+}
+
+.freightTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #7f7e7e;
+}
+
+.freightPrice {
+  float: right;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #454444;
+}
+
+.messageBox {
+  width: 100%;
+  height: 64rpx;
+}
+
+.messageTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #7f7e7e;
+}
+
+.messageCon {
+  float: left;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  color: #454444;
+}
+
+.orderTotal {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.orderTotal text {
+  float: right;
+  font-size: 24rpx;
+  line-height: 100rpx;
+  color: #999999;
+}
+
+.orderTotal .orderTotalPrice {
+  color: #e22e2e;
+  margin-left: 20rpx;
+}
+
+.orderBottom {
+  width: 100%;
+  /* height: 226rpx; */
+  margin: 10rpx 0;
+  background-color: #fff;
+  padding: 26rpx 20rpx 2rpx;
+}
+
+.orderBottomBox {
+  width: 100%;
+  height: 60rpx;
+  margin-bottom: 12rpx;
+}
+
+.orderBottomTxt {
+  float: left;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #7f7e7e;
+}
+
+.orderBottomCon {
+  float: right;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  color: #454444;
+}
+
+.orderBtnBox {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  z-index: 1000;
+  padding: 20rpx;
+}
+
+.orderBtnBox button {
+  float: right;
+  font-size: 24rpx;
+  line-height: 60rpx;
+  border-radius: 8rpx;
+}
+
+.remindBtn {
+  width: 218rpx;
+  height: 60rpx;
+  color: #fff;
+  background-color: #e01212;
+}
+
+.confirmBtn {
+  width: 176rpx;
+  height: 60rpx;
+  color: #fff;
+  background-color: #e01212;
+  margin-left: 32rpx;
+}
+
+.evaluationBtn {
+  position: absolute;
+  right: 0;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  border-radius: 8rpx;
+  bottom: 20rpx;
+  width: 106rpx;
+  height: 40rpx;
+  color: #fff;
+  background-color: #e01212;
+  z-index: 1000;
+}
+
+.evaluationBtn.active {
+  color: #7f7f7f;
+  border: 1rpx solid #7e7e7e;
+  line-height: 58rpx;
+}
+
+.orderBtnBox .serviceBtn {
+  width: 176rpx;
+  height: 60rpx;
+  border: 1rpx solid #e01212;
+  line-height: 58rpx;
+  color: #e01212;
+  margin-left: 32rpx;
+}
+
+.orderBtnBox .logisticsBtn {
+  width: 176rpx;
+  height: 60rpx;
+  border: 1rpx solid #7e7e7e;
+  color: #7f7f7f;
+  line-height: 58rpx;
+}
+
+.popUpBk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 444rpx;
+  margin-top: -222rpx;
+  z-index: 1000;
+  background-color: #fff;
+  border-radius: 8rpx;
+}
+
+.popUpTop {
+  width: 100%;
+  height: 158rpx;
+  font-size: 36rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4303);
+}
+
+.popUpTxt {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 130rpx;
+  color: #000;
+  text-align: center;
+  margin-top: 20rpx;
+}
+
+.contact {
+  display: block;
+  width: 330rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #e01212;
+}
+
+.toClose {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 1100;
+}

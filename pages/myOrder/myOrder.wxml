@@ -1,0 +1,65 @@
+<!--pages/myOrder/myOrder.wxml-->
+<view class='container'>
+  <view class='orderNav'>
+    <scroll-view class='orderNavList' scroll-x="true" scroll-into-view="{{toView}}">
+      <view class="orderNavBox {{activeCategoryId==index ? 'active' : ''}}" wx:for="{{orderNav}}" wx:key="id" id="{{item.id}}" data-index='{{index}}' bindtap='navClick'>{{item.name}}</view>
+    </scroll-view>
+  </view>
+  <view class='main'>
+    <navigator class='orderBox' wx:for='{{orderList}}' wx:key='{{item.id}}' url='/pages/orderDetails/orderDetails?id={{item.order_id}}' hover-class="none">
+      <view class='orderTop'>
+        <view class='orderTopTxt'>订单号：{{item.order_sn}}</view>
+        <view class='orderStatus'>{{item.status}}</view>
+      </view>
+      <view class='orderInfo' wx:for='{{item.goods}}' wx:key='{{index}}' wx:if="{{status!=4}}">
+        <view class='orderImg'>
+          <image src='{{pathHeader+item.thumbnail}}' />
+        </view>
+        <view class='orderInfoCon'>
+          <view class='orderTitle'>{{item.product_name}}</view>
+          <view class='orderLabel'>{{item.content}}</view>
+          <view class='orderPriceBox'>
+           <view class='orderPrice'>￥{{item.product_price}}</view>
+           <view class='orderNumber'>X{{item.product_number}}</view>
+          </view>
+        </view>
+      </view>
+      <view class='orderInfo' wx:for='{{item.goods}}' wx:key='{{index}}' wx:if="{{status==4}}">
+        <view class='orderImg'>
+          <image src='{{pathHeader+item.thumbnail}}' />
+        </view>
+        <view class='orderInfoCon'>
+          <view class='orderTitle'>{{item.product_name}}</view>
+          <view class="orderLabelBox">
+            <view class='orderLabel1'>{{item.content}}</view>
+            <view class='orderNumber1'>X{{item.product_number}}</view>
+          </view>
+          <view class='orderPrice1'>￥{{item.product_price}}</view>
+        </view>
+        <button class="evaluationBtn {{item.evaluatr_status!=0? 'active' : ''}}" wx:if='{{item.evaluatr_status==0}}' hover-class='none' data-id="{{item.id}}" catchtap='toEvaluate'>评价</button>
+        <button class="evaluationBtn {{item.evaluatr_status!=0? 'active' : ''}}" wx:else hover-class='none' data-id="{{item.id}}">已评价</button>
+      </view>
+      <view class='orderTotal'>
+        <text class='orderTotalPrice'>￥{{item.order_money}}</text>
+        <text>合计</text>
+        <text>共{{item.goods.length}}件商品，</text>
+      </view>
+      <view class='orderBtn' wx:if="{{item.order_status!=4 && item.order_status!=0}}">
+        <button class='remindBtn' hover-class='none' open-type='contact' catchtap="useless" wx:if="{{(item.order_status==2)}}">提醒卖家发货</button>
+        <button class='confirmBtn' hover-class='none' catchtap="toReceipt" data-id="{{item.order_id}}" wx:if="{{(item.order_status==3)}}">确认收货</button>
+        <button class='serviceBtn' catchtap='serviceBtn' hover-class='none' wx:if="{{(item.order_status==5 || item.order_status==3)}}">售后服务</button>
+        <button class='logisticsBtn' data-id="{{item.order_id}}" catchtap='toLogistics' hover-class='none' wx:if="{{(item.order_status==3)}}">查看物流</button>
+        <button class='confirmBtn' hover-class='none' catchtap="cancelOrder" data-id="{{item.order_id}}" wx:if="{{(item.order_status==1)}}">取消订单</button>
+        <button class='logisticsBtn' catchtap='toPay' data-id="{{item.order_id}}" hover-class='none' wx:if="{{(item.order_status==1)}}">支付</button>
+      </view>
+    </navigator>
+  </view>
+</view>
+
+<view class='popUpBk' hidden='{{isService}}'></view>
+<view class='popUp' hidden='{{isService}}'>
+  <view class='popUpTop'>售后服务</view>
+  <view class='popUpTxt'>是否联系客服？</view>
+  <button class='contact' open-type='contact'>联系客服</button>
+  <image class='toClose' catchtap='toClose' src='/images/close1.png' />
+</view>

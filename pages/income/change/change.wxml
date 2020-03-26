@@ -1,0 +1,27 @@
+<!--pages/income/change/change.wxml-->
+<view class='container'>
+  <view class='changeTop'>
+    <view class='changeTopBox'>
+      <view class='changeTopTxt'>提现至:</view>
+      <image class='changeTopImg' src='/images/changeImg.png' />
+      <view class='changeTopTit'>微信零钱</view>
+    </view>
+  </view>
+  <view class='changeContent'>
+    <view class='changeTitle'>提现金额</view>
+    <view class='inputBox'>
+      <text class='inputBoxTxt'>￥</text>
+      <input class='numberInp' type='number'></input>
+    </view>
+    <view class='changeBalance'>账户余额<view>668元</view></view>
+  </view>
+  <view class='withdrawBtn'>立即提现</view>
+</view>
+
+
+<view class='popUpBk' hidden='{{isSuccess}}'></view>
+<view class='successPopUp' hidden='{{isSuccess}}'>
+  <image class='successBk' src='/images/withdrawPopBk.png' />
+  <text class='successTxt'>提现申请发起成功，处理中！</text>
+  <button class='closePopUp' bindtap='closePopUp'>确定</button>
+</view>

@@ -1,0 +1,232 @@
+/* pages/shop-cart/shop-cart.wxss */
+.empty {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #fff;
+}
+
+.emptyBk {
+  display: block;
+  width: 100%;
+  height: 826rpx;
+}
+
+.toChoose {
+  position: absolute;
+  top: 614rpx;
+  left: 212rpx;
+  width: 330rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #e01212;
+  border-radius: 6rpx;
+  letter-spacing: 4rpx;
+}
+
+.shopCartTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  width: 100%;
+  height: 100rpx;
+  background: linear-gradient(to right,#e01212,#fd4403);
+  padding: 0 20rpx;
+}
+
+.chooseAll {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  background-color: inherit;
+  border: 4rpx solid #fff;
+  box-sizing: border-box;
+  margin-top: 32rpx;
+}
+
+.chooseAll.active {
+  background: url(https://ssl.mandylor.cn/quan.png) no-repeat;
+  background-size: cover;
+  border: none;
+  border-radius: 50%;
+}
+
+.chooseAllTxt {
+  float: left;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  color: #fff;
+  margin-left: 16rpx;
+}
+
+.toEmpty {
+  float: right;
+  font-size: 30rpx;
+  line-height: 100rpx;
+  color: #fff;
+}
+
+.cartContent {
+  width: 100%;
+  height: auto;
+  padding-bottom: 80rpx;
+  padding-top: 118rpx;
+}
+
+.goodsBox {
+  position: relative;
+  width: 100%;
+  height: 314rpx;
+  margin-bottom: 8rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.choose {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  border: 4rpx solid #d2d2d2;
+  border-radius: 50%;
+  margin-top: 112rpx;
+}
+
+.choose.active {
+  border: none;
+  background: url(https://ssl.mandylor.cn/xuan.png) no-repeat;
+  background-size: cover;
+}
+
+.goodsImg {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  overflow: hidden;
+  border-radius: 6rpx;
+  margin-top: 40rpx;
+  margin-left: 18rpx;
+}
+
+.goodsImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.goodsContent {
+  float: left;
+  width: 440rpx;
+  height: 212rpx;
+  margin-left: 24rpx;
+  padding-top: 34rpx;
+}
+
+.goodsName {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #1f1f20;
+}
+
+.labelShow {
+  width: 100%;
+  height: 50rpx;
+  margin-top: 16rpx;
+}
+
+.labelBox {
+  float: left;
+  height: 50rpx;
+  background-color: #eeeeee;
+  border-radius: 6rpx;
+  padding: 0 20rpx 0 12rpx;
+}
+
+.label {
+  float: left;
+  font-size: 22rpx;
+  line-height: 50rpx;
+  color: #b8b8b8;
+}
+
+.labelArrow {
+  float: left;
+  width: 20rpx;
+  height: 10rpx;
+  margin-left: 12rpx;
+  margin-top: 22rpx;
+}
+
+.goodsPrice {
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+  margin-top: 16rpx;
+}
+
+.numberBox {
+  position: absolute;
+  right: 20rpx;
+  bottom: 38rpx;
+  height: 56rpx;
+  z-index: 1000;
+}
+
+.numberPlus, .numberShow, .numberLess {
+  float: right;
+  width: 72rpx;
+  height: 56rpx;
+  line-height: 56rpx;
+  font-size: 26rpx;
+  text-align: center;
+  background-color: #f2f2f2;
+  color: #929292;
+  margin-left: 4rpx;
+}
+
+.numberPlus, .numberLess {
+  font-size: 40rpx;
+}
+
+.shopBottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80rpx;
+  background-color: #fff;
+  padding-left: 20rpx;
+  z-index: 1000;
+}
+
+.totalPrice {
+  max-width: 320rpx;
+  float: left;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #e01212;
+  overflow: hidden;
+}
+
+.buyBtn {
+  float: right;
+  width: 374rpx;
+  height: 100%;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #e01212;
+  padding: 0;
+  border-radius: 0;
+}

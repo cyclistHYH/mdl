@@ -1,0 +1,6 @@
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class='container'>
+  <view class="helpTitle">热点问题</view>
+  <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+</view>

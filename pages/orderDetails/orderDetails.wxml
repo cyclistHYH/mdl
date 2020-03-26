@@ -1,0 +1,114 @@
+<!--pages/orderDetails/orderDetails.wxml-->
+<view class='container'>
+  <view class='orderDetailsTop' wx:if='{{status==0}}'>
+    <view class='orderStatus1'>订单已取消</view>
+  </view>
+  <view class='orderDetailsTop' wx:elif='{{status==1}}'>
+    <view class='orderStatus1'>待付款</view>
+  </view>
+  <view class='orderDetailsTop' wx:elif='{{status==2}}'>
+    <view class='orderStatus1'>等待卖家发货</view>
+  </view>
+  <view class='orderDetailsTop' wx:elif='{{status==5}}'>
+    <view class='orderStatus1'>订单已完成</view>
+  </view>
+  <view class='orderDetailsTop' wx:elif='{{status==4}}'>
+    <view class='orderStatus1'>订单待评价</view>
+  </view>
+  <view class='orderDetailsTop' wx:else>
+    <view class='orderStatus'>{{orderStatus}}</view>
+    <view class='orderDelivery'>
+      <text>快递公司：{{orderDeliveryName}}</text>
+      <text>快递单号：{{orderInfo.courier_number}}</text>
+    </view>
+  </view>
+  <navigator class='logistics clearfix' wx:if='{{status!=0 && status!=1 && status!=2}}' url="/pages/logistics/logistics?id={{orderInfo.order_id}}" hover-class="none">
+    <image class='logisticsImg' src='/images/logisticsImg.png' />
+    <view class='logisticsInfo'>
+      <view class='logisticsTitle'>{{logisticsInfo.context}}</view>
+      <view class='logisticsTime'>{{logisticsInfo.time}}</view>
+    </view>
+    <image class='logisticsArrow' src='/images/arrowRight.png' />
+  </navigator>
+  <view class='addressBox clearfix'>
+    <image class='addressImg' src='/images/addressImg.png' />
+    <view class='addressInfo'>
+      <view class='addressInfoTop'>
+        <text class='addressName'>{{orderInfo.consignee}}</text>
+        <text class='addressTel'>{{orderInfo.mobile}}</text>
+      </view>
+      <view class='addressCon'>{{orderInfo.province}} {{orderInfo.city}} {{orderInfo.district}} {{orderInfo.address}}</view>
+    </view>
+  </view>
+  <view class='productBox' wx:for="{{orderInfo.goods}}" wx:key='{{index}}'>
+    <view class='orderInfo'>
+      <view class='orderImg'>
+        <image src='{{pathHeader + item.thumbnail}}' />
+      </view>
+      <view class='orderInfoCon' wx:if='{{status!=4}}'>
+        <view class='orderTitle'>{{item.product_name}}</view>
+        <view class='orderLabel'>{{item.content}}</view>
+        <view class='orderPriceBox'>
+          <view class='orderPrice'>￥{{item.product_price}}</view>
+          <view class='orderNumber'>{{item.product_number}}</view>
+        </view>
+      </view>
+      <view class='orderInfoCon'  wx:if='{{status==4}}'>
+        <view class='orderTitle'>{{item.product_name}}</view>
+        <view class="orderLabelBox">
+          <view class='orderLabel1'>{{item.content}}</view>
+          <view class='orderNumber1'>X{{item.product_number}}</view>
+        </view>
+        <view class='orderPrice1'>￥{{item.product_price}}</view>
+      </view>
+      <button class="evaluationBtn {{item.evaluatr_status!=0? 'active' : ''}}" wx:if='{{item.evaluatr_status==0 &&status==4}}' hover-class='none' data-id="{{item.id}}" catchtap='toEvaluate'>评价</button>
+        <button class="evaluationBtn {{item.evaluatr_status!=0? 'active' : ''}}" wx:elif='{{item.evaluatr_status!=0 && status==4}}' hover-class='none' data-id="{{item.id}}">已评价</button>
+    </view>
+  </view>
+  <view class="orderInfoBox">
+    <view class='freightBox'>
+      <text class='freightTxt'>运费</text>
+      <text class='freightPrice'>￥{{orderInfo.postage}}</text>
+    </view>
+    <view class='messageBox'>
+      <text class='messageTxt'>买家留言:</text>
+      <text class='messageCon'>{{orderInfo.remark}}</text>
+    </view>
+  </view>
+  <view class='orderTotal'>
+    <text class='orderTotalPrice'>￥{{orderInfo.order_money}}</text>
+    <text>合计</text>
+    <text>共{{orderInfo.goods.length}}件商品，</text>
+  </view>
+  <view class='orderBottom'>
+    <view class='orderBottomBox'>
+      <text class='orderBottomTxt'>订单编号</text>
+      <text class='orderBottomCon'>{{orderInfo.order_sn}}</text>
+    </view>
+    <view class='orderBottomBox' wx:if="{{status!=0 && status!=1}}">
+      <text class='orderBottomTxt'>付款时间</text>
+      <text class='orderBottomCon'>{{orderInfo.created_date}}</text>
+    </view>
+    <!-- <view class='orderBottomBox' wx:if="{{status!=0 && status!=1}}">
+      <text class='orderBottomTxt'>发货时间</text>
+      <text class='orderBottomCon'>{{deliveryTime}}</text>
+    </view> -->
+  </view>
+</view>
+
+<view class='orderBtnBox' wx:if='{{status!=0 && status!=4}}'>
+  <button class='remindBtn' hover-class='none' open-type="contact" wx:if="{{(status==2)}}">提醒卖家发货</button>
+  <button class='confirmBtn' hover-class='none' catchtap="toReceipt" data-id="{{orderInfo.order_id}}" wx:if="{{(status==3)}}">确认收货</button>
+  <button class='serviceBtn' hover-class='none' catchtap='serviceBtn' wx:if="{{(status==5 || status==3)}}">售后服务</button>
+  <button class='logisticsBtn' catchtap='toLogistics' data-id="{{orderInfo.order_id}}" hover-class='none' wx:if="{{(status==3)}}">查看物流</button>
+  <button class='confirmBtn' hover-class='none' catchtap="cancelOrder" data-id="{{orderInfo.order_id}}" wx:if="{{(status==1)}}">取消订单</button>
+  <button class='logisticsBtn' catchtap='toPay' data-id="{{orderInfo.order_id}}" hover-class='none' wx:if="{{(status==1)}}">支付</button>
+</view>
+
+<view class='popUpBk' hidden='{{isService}}'></view>
+<view class='popUp' hidden='{{isService}}'>
+  <view class='popUpTop'>售后服务</view>
+  <view class='popUpTxt'>是否联系客服？</view>
+  <button class='contact' open-type='contact'>联系客服</button>
+  <image class='toClose' catchtap='toClose' src='/images/close1.png' />
+</view>

@@ -1,0 +1,180 @@
+/* pages/exchangeDetails/exchangeDetails.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.exchangeTop {
+  width: 100%;
+  height: 408rpx;
+  background: linear-gradient(to right,#e01212,#fd4303);
+  padding-top: 78rpx;
+}
+
+.exchangeTopTitle {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 52rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.exchangeTopNum {
+  width: 100%;
+  font-size: 72rpx;
+  line-height: 96rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.toExchange {
+  display: block;
+  width: 260rpx;
+  height: 64rpx;
+  font-size: 28rpx;
+  line-height: 64rpx;
+  border-radius: 32rpx;
+  background-color: #fff;
+  color: #e31810;
+  margin-top: 62rpx;
+}
+
+.exchangeInfo {
+  width: 100%;
+  height: 108rpx;
+  padding: 0 20rpx;
+  margin-top: 28rpx;
+  margin-bottom: 28rpx;
+}
+
+.exchangeInfoBox {
+  float: left;
+  width: 354rpx;
+  height: 100%;
+}
+
+.exchangeInfoLine {
+  float: left;
+  width: 2rpx;
+  height: 100%;
+  background-color: #e01212;
+}
+
+.exchangeInfoTxt {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: #999999;
+}
+
+.exchangeInfoNum {
+  width: 100%;
+  font-size: 36rpx;
+  line-height: 54rpx;
+  margin-top: 6rpx;
+  text-align: center;
+  color: #333;
+}
+
+.exchangeDescription {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.exchangeDescriptionImg {
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 28rpx;
+}
+
+.exchangeDescriptionTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 98rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.exchangeDescriptionArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 37rpx;
+}
+
+.popUpBk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 536rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  z-index: 1000;
+  margin-top: -268rpx;
+}
+
+.popUpTop {
+  width: 100%;
+  height: 158rpx;
+  font-size: 36rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4303);
+}
+
+/* .popUpCon {
+  width: 100%;
+  height: 378rpx;
+  padding: 42rpx 94rpx 0;
+}
+
+.popUpTxt {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #000;
+} */
+
+.toClose {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 1100;
+}
+
+.remind {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 448rpx;
+  margin-top: -224rpx;
+  background-color: #fff;
+  border-radius: 8rpx;
+  z-index: 1000;
+}
+
+.remindCon {
+  width: 100%;
+  height: 290rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #000;
+  padding: 80rpx 76rpx 0;
+}

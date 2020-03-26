@@ -1,0 +1,154 @@
+/* pages/myComment/myComment.wxss */
+.myCommentTop {
+  width: 100%;
+  height: 112rpx;
+  font-size: 30rpx;
+  line-height: 112rpx;
+  padding: 0 20rpx;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4303);
+}
+
+.commentBox {
+  width: 100%;
+  min-height: 560rpx;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.commentTop {
+  width: 100%;
+  height: 70rpx;
+}
+
+.commentAvatar {
+  float: left;
+  width: 70rpx;
+  height: 70rpx;
+  border-radius: 50%;
+}
+
+.commentName {
+  float: left;
+  font-size: 30rpx;
+  line-height: 70rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.commemtTimeBox {
+  width: 100%;
+  height: 32rpx;
+  margin-top: 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.commemtTimeBox text {
+  float: left;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #999999;
+}
+
+.commemtTimeBox text:last-child {
+  margin-left: 32rpx;
+}
+
+.commentCon {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #333333;
+}
+
+.productInfo {
+  width: 100%;
+  height: 220rpx;
+  background-color: #f3f3f3;
+  margin-top: 20rpx;
+}
+
+.productImg {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  margin-top: 22rpx;
+  border-radius: 6rpx;
+  margin-left: 24rpx;
+}
+
+.productInfoCon {
+  float: left;
+  width: 510rpx;
+  height: 100%;
+  padding-left: 24rpx;
+  padding-top: 16rpx;
+}
+
+.orderTitle {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #1f1f20;
+  margin-bottom: 10rpx;
+}
+
+.orderLabel {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+  margin-bottom: 22rpx;
+}
+
+.orderPrice {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.commentImg {
+  width: 100%;
+  height: auto;
+  margin-bottom: 20rpx;
+  margin-top: 20rpx;
+}
+
+.commentImg image {
+  float: left;
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 10rpx;
+  margin-bottom: 20rpx;
+}
+
+.commentImg image:nth-child(3n) {
+  margin-right: 0;
+}
+
+.commentBottom {
+  width: 100%;
+  height: 32rpx;
+  margin-top: 40rpx;
+}
+
+.commentBrowse {
+  float: left;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #999999;
+}
+
+.commentPraise {
+  float: right;
+  font-size: 24rpx;
+  line-height: 32rpx;
+  color: #ff6702;
+}

@@ -1,0 +1,8 @@
+<!--pages/myCode/myCode.wxml-->
+<view class='container'>
+  <image class='myCodeBk' src='/images/myCodeBk.jpg' />
+  <view class='codeContent'>
+    <image class='myCodeImg' src='{{pathHeader+img}}' bindlongtap="toSaveImg" />
+    <view class='myCodeTxt'>我的邀请码:{{userId}}</view>
+  </view>
+</view>

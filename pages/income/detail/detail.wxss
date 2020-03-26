@@ -1,0 +1,151 @@
+/* pages/income/detail/detail.wxss */
+.container {
+  padding-top: 102rpx;
+}
+
+.detailTop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 102rpx;
+  padding: 0 20rpx;
+  z-index: 1000;
+}
+
+.dataBox {
+  float: left;
+  width: 260rpx;
+  height: 50rpx;
+  margin-top: 26rpx;
+  background-color: #fff;
+  border-radius: 20rpx;
+}
+
+.dataImg {
+  position: absolute;
+  top: 19rpx;
+  right: 28rpx;
+  width: 24rpx;
+  height: 12rpx;
+  z-index: 100;
+}
+
+.dataChoose {
+  position: relative;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.dataCon {
+  width: 100%;
+  height: 100%;
+  font-size: 28rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #333333;
+  padding-right: 60rpx;
+}
+
+.detailTopInfo {
+  float: right;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  padding-top: 12rpx;
+}
+
+.detailTopInfoTxt {
+  display: inline-block;
+  font-size: 24rpx;
+  line-height: 40rpx;
+  text-align: right;
+  color: #939393;
+}
+
+.main {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.detailBox {
+  width: 100%;
+  /* height: 160rpx; */
+  border-bottom: 2rpx solid #e5e5e5;
+  padding-bottom: 28rpx;
+}
+
+.detailBox:last-child {
+  border-color: #fff;
+}
+
+.black {
+  background-color: #1e1d1d;
+}
+
+.green {
+  background-color: #2fd003;
+}
+
+.red {
+  background-color: #d91e2d;
+}
+
+.colorBlue {
+  color: #189cf8 !important;
+}
+
+.colorRed {
+  color: #d91e2d !important;
+}
+
+.detailLeft {
+  float: left;
+  width: 50rpx;
+  height: 50rpx;
+  font-size: 24rpx;
+  line-height: 50rpx;
+  text-align: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-top: 54rpx;
+}
+
+.detailContent {
+  float: left;
+  display: flex;
+  max-width: 520rpx;
+  flex-direction: column;
+  padding-top: 28rpx;
+  margin-left: 26rpx;
+}
+
+.detailTxt {
+  font-size: 28rpx;
+  line-height: 52rpx;
+  color: #333;
+}
+
+.detailTime {
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #aeadad;
+}
+
+.detailRight {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  padding-top: 34rpx;
+}
+
+.detailRightTxt {
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #333;
+  text-align: right;
+}

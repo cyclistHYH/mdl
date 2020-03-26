@@ -1,0 +1,111 @@
+/* pages/logistics/logistics.wxss */
+.container {
+  background-color: #fff;
+}
+
+.logisticsTitle {
+  width: 100%;
+  height: 112rpx;
+  font-size: 30rpx;
+  line-height: 112rpx;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4403);
+  padding-left: 58rpx;
+}
+
+.logistics {
+  width: 710rpx;
+  margin: 0 auto;
+  height: auto;
+  padding-top: 48rpx;
+}
+
+.logisticsBox {
+  width: 100%;
+  height: auto;
+  position: relative;
+  padding-bottom: 72rpx;
+}
+
+.logisticsTime {
+  float: left;
+  width: 138rpx;
+  text-align: right;
+  height: 72rpx;
+}
+
+.logisticsTimeDay {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #888888;
+}
+
+.logisticsTimeTxt {
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color: #888888;
+}
+
+.logisticsPoint {
+  position: relative;
+  float: left;
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 34rpx;
+  margin-right: 16rpx;
+  margin-top: 16rpx;
+  background-color: #888888;
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.logisticsPoint.active {
+  background-color: #d92a35;
+}
+
+.logisticsImg {
+  position: relative;
+  float: left;
+  width: 52rpx;
+  height: 52rpx;
+  margin-left: 18rpx;
+  z-index: 200;
+}
+
+.logisticsInfo {
+  float: left;
+  width: 442rpx;
+  margin-left: 32rpx;
+  height: auto;
+}
+
+.color {
+  color: #333 !important;
+}
+
+.logisticsStatus {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 36rpx;
+  color: #888888;
+}
+
+.logisticsTxt {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 36rpx;
+  color: #888888;
+}
+
+.logisticsLine {
+  position: absolute;
+  top: 0;
+  left: 182rpx;
+  width: 2rpx;
+  height: 100%;
+  background-color: #d2d2d2;
+}
+
+.logisticsBox:last-child .logisticsLine {
+  height: 20rpx;
+}

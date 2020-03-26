@@ -1,0 +1,45 @@
+<!--pages/evaluation/evaluation.wxml-->
+<view class='container'>
+<form bindsubmit='toConfirm'>
+  <view class='star'>
+    <text class='starTxt'>星级</text>
+    <view class='starBox'>
+      <view class='starUnselected'>
+        <block wx:for="{{unselected}}" wx:key="index">
+          <image catchtap='toSelected' id='{{index+1}}' data-in='unselected' src='/images/starUnselected.png' />
+        </block>
+      </view>
+      <view class='starSelected'>
+        <block wx:for="{{selected}}" wx:key="index">
+          <image catchtap='toSelected' id='{{index+1}}' data-in='selected' src='/images/starSelected.png' />
+        </block>
+      </view>
+    </view>
+  </view>
+  <view class='evaluation'>
+    <view class='evaluationInpBox'>
+      <view class='evaluationInpTxt'>评价</view>
+      <textarea class='evaluationInp' placeholder='请输入您的评价，内容不超过200字。' name='evaluationCon' maxlength='200'></textarea>
+    </view>
+    <view class='uploadPicture'>
+      <text class='uploadPictureTxt'>图片</text>
+      <view class='uploadPictureBox'>
+        <view>
+          <block wx:for="{{uploadImg}}" wx:key="index">
+            <view class='uploadPictureShow'>
+              <image class='uploadPictureShowImg' src='{{item}}' />
+              <image bindtap='toDelete' data-index='{{index}}' class='closeBtn' src='/images/closeBtn.png' />
+            </view>
+          </block>
+        </view>
+        <image bindtap='toUploadPicture' hidden='{{isShow}}' class='uploadPictureBtn' src='/images/uploadPictureBtn.png' />
+      </view>
+    </view>
+    <view class='chooseBox'>
+      <view class="choose {{isAnonymous ? 'active' : ''}}" bindtap='toChoose'></view>
+      <text class='chooseTxt'>匿名提交</text>
+    </view>
+  </view>
+  <button class='confirmBtn' form-type='submit'>确认</button>
+</form>
+</view>

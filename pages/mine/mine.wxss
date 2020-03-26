@@ -1,0 +1,272 @@
+/* pages/mine/mine.wxss */
+page {
+  height: 100%;
+}
+
+.container {
+  padding-bottom: 20rpx;
+}
+
+.mineTop {
+  position: relative;
+  width: 100%;
+  height: 480rpx;
+}
+
+.mineTopBk {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.mineTopBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+}
+
+.avatarBk {
+  display: block;
+  width: 370rpx;
+  height: 302rpx;
+  margin: 0 auto;
+}
+
+.mineAvatar {
+  position: absolute;
+  top: 36rpx;
+  left: 289rpx;
+  width: 172rpx;
+  height: 172rpx;
+  border-radius: 50%;
+  z-index: 200;
+}
+
+.mineNickname {
+  position: absolute;
+  top: 208rpx;
+  left: 0;
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #fff;
+}
+
+.memberLevel {
+  width: 100%;
+  height: 52rpx;
+  text-align: center;
+}
+
+.toLogin {
+  position: absolute;
+  top: 240rpx;
+  left: 50%;
+  width: 160rpx;
+  height: 60rpx;
+  font-size: 30rpx;
+  line-height: 58rpx;
+  text-align: center;
+  border: 1rpx solid #fff;
+  color: #fff;
+  border-radius: 30rpx;
+  margin-left: -80rpx;
+  z-index: 200;
+}
+
+.memberLevelBk {
+  display: inline-block;
+  background: linear-gradient(#f0f0f0,#c9c9c9);
+  height: 54rpx;
+  border-radius: 26rpx;
+  padding: 4rpx 6rpx;
+}
+
+.memberLevelBox {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  padding: 0 28rpx;
+  text-shadow: 1px 0 0px #b1b1b1, -1px 0 0px #b1b1b1, 0 1px #b1b1b1, 0 -1px #b1b1b1, 1px 1px #b1b1b1, -1px -1px #b1b1b1, 1px -1px #b1b1b1, -1px 1px #b1b1b1;
+  color: #ffffff;
+  border: 2rpx solid #d2d2d2;
+  border-radius: 22rpx;
+}
+
+.member {
+  width: 100%;
+  height: 52rpx;
+  text-align: center;
+}
+
+.memberBk {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(#ffd10a,#f7a618);
+  height: 54rpx;
+  border-radius: 26rpx;
+  padding: 4rpx 6rpx;
+}
+
+.memberBox1 {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  padding: 0 40rpx 0 40rpx;
+  text-shadow: 1px 0 0px #e58d03, -1px 0 0px #e58d03, 0 1px #e58d03, 0 -1px #e58d03, 1px 1px #e58d03, -1px -1px #e58d03, 1px -1px #e58d03, -1px 1px #e58d03;
+  color: #ffffff;
+  border: 2rpx solid #ffe958;
+  border-radius: 22rpx;
+}
+
+.memberBox {
+  display: inline-block;
+  font-size: 28rpx;
+  line-height: 42rpx;
+  padding: 0 20rpx 0 72rpx;
+  text-shadow: 1px 0 0px #e58d03, -1px 0 0px #e58d03, 0 1px #e58d03, 0 -1px #e58d03, 1px 1px #e58d03, -1px -1px #e58d03, 1px -1px #e58d03, -1px 1px #e58d03;
+  color: #ffffff;
+  border: 2rpx solid #ffe958;
+  border-radius: 22rpx;
+}
+
+.memberImg {
+  position: absolute;
+  top: 10rpx;
+  left: 24rpx;
+  width: 52rpx;
+  height: 34rpx;
+}
+
+.mineMain {
+  position: relative;
+  width: 710rpx;
+  height: auto;
+  margin: -88rpx auto 0;
+  z-index: 500;
+}
+
+.mineOrderNav {
+  width: 100%;
+  height: 230rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  box-shadow: 0 8rpx 8rpx rgba(244, 18, 18, 0.12);
+  margin-bottom: 16rpx;
+  padding: 4rpx 20rpx;
+}
+
+.mineOrderTop {
+  width: 100%;
+  height: 86rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  box-sizing: border-box;
+}
+
+.mineOrderTop text {
+  float: left;
+  font-size: 28rpx;
+  line-height: 84rpx;
+  color: #333;
+}
+
+.mineOrderTop image {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 30rpx;
+}
+
+.mineOrderNavList {
+  width: 100%;
+  height: 140rpx;
+  padding-top: 28rpx;
+}
+
+.mineOrderNavBox {
+  position: relative;
+  float: left;
+  width: 174rpx;
+  height: 100%;
+  margin-right: 74rpx;
+}
+
+.mineOrderNavBox:last-child {
+  margin-right: 0;
+}
+
+.mineOrderImg {
+  display: block;
+  width: 54rpx;
+  height: 40rpx;
+  margin: 0 auto;
+}
+
+.mineOrderTxt {
+  display: block;
+  width: 100%;
+  height: 64rpx;
+  font-size: 24rpx;
+  line-height: 64rpx;
+  text-align: center;
+  color: #666666;
+}
+
+.mineOrderPrompt {
+  position: absolute;
+  min-width: 42rpx;
+  top: -10rpx;
+  left: 102rpx;
+  font-size: 18rpx;
+  line-height: 28rpx;
+  text-align: center;
+  color: #fff;
+  padding: 0 12rpx;
+  background-color: #e21611;
+  border-radius: 14rpx;
+}
+
+.mineNav {
+  width: 100%;
+  height: auto;
+  background-color: #fff;
+  border-radius: 8rpx;
+  padding: 0 20rpx;
+}
+
+.mineNavBox {
+  display: block;
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+}
+
+.mineNavBox:last-child {
+  border-color: #fff;
+}
+
+.mineNavImg {
+  float: left;
+  width: 38rpx;
+  height: 42rpx;
+  margin-top: 28rpx;
+}
+
+.mineNavTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 98rpx;
+  color: #333;
+  margin-left: 12rpx;
+}
+
+.mineNavArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 42rpx;
+}

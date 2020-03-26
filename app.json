@@ -1,0 +1,75 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/categories/categories",
+    "pages/shop-cart/shop-cart",
+    "pages/mine/mine",
+    "pages/productDetails/productDetails",
+    "pages/comment/comment",
+    "pages/buyNow/buyNow",
+    "pages/addressList/addressList",
+    "pages/addAddress/addAddress",
+    "pages/addressModify/addressModify",
+    "pages/myOrder/myOrder",
+    "pages/orderDetails/orderDetails",
+    "pages/evaluation/evaluation",
+    "pages/evaluation/success/success",
+    "pages/myComment/myComment",
+    "pages/myCode/myCode",
+    "pages/exchange/exchange",
+    "pages/exchangeDetails/exchangeDetails",
+    "pages/exchangeOrder/exchangeOrder",
+    "pages/income/income",
+    "pages/income/change/change",
+    "pages/income/detail/detail",
+    "pages/income/bankCard/bankCard",
+    "pages/income/addCard/addCard",
+    "pages/income/cardList/cardList",
+    "pages/buySuccess/buySuccess",
+    "pages/failure/failure",
+    "pages/binding/binding",
+    "pages/logistics/logistics",
+    "pages/authorize/authorize",
+    "pages/helpCenter/helpCenter",
+    "pages/myShare/myShare"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "曼迪拉",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#383838",
+    "selectedColor": "#e01212",
+    "borderStyle": "black",
+    "backgroundColor": "#fff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "images/index-off.png",
+        "selectedIconPath": "images/index-on.png"
+      },
+      {
+        "pagePath": "pages/categories/categories",
+        "text": "商品分类",
+        "iconPath": "images/categories-off.png",
+        "selectedIconPath": "images/categories-on.png"
+      },
+      {
+        "pagePath": "pages/shop-cart/shop-cart",
+        "text": "购物车",
+        "iconPath": "images/shopCart-off.png",
+        "selectedIconPath": "images/shopCart-on.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "个人中心",
+        "iconPath": "images/mine-off.png",
+        "selectedIconPath": "images/mine-on.png"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

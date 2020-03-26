@@ -1,0 +1,16 @@
+/* pages/helpCenter/helpCenter.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.container {
+  min-height: 100vh;
+  background-color: #fff;
+  padding: 20rpx;
+}
+
+.helpTitle {
+  width: 100%;
+  font-size: 32rpx;
+  line-height: 64rpx;
+  color: #333;
+  text-align: center;
+}

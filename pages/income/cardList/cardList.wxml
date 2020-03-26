@@ -1,0 +1,23 @@
+<!--pages/income/cardList/cardList.wxml-->
+<view class='container'>
+  <radio-group class='cardList' bindchange='chooseBtn'>
+    <label wx:for="{{cardList}}" wx:key="{{index}}">
+      <view class='bankCardTop'>
+        <view class='bankCardTopCon'>
+          <view class='bankName'>{{item.open_bank}}</view>
+          <view class='bankNumber'>{{item.bankcard_numbers}}</view>
+        </view>
+        <radio class='cardChoose' value="{{item.id}}" checked='{{item.isChecked}}'></radio>
+      </view>
+    </label>
+  </radio-group>
+
+  <navigator class='bankCardTop' hover-class='none' hidden='{{isNull}}' url='/pages/income/addCard/addCard'>
+    <image class='bankCardTopImg' src='/images/cardAdd.png' />
+    <text class='bankCardTopTxt'>去添加银行卡></text>
+  </navigator>
+
+
+  <button class="deleteBtn" catchtap="toDelete">删除</button>
+  <button class='confirmBtn' catchtap="confirmBtn">确认</button>
+</view>

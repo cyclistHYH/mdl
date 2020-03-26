@@ -1,0 +1,21 @@
+<!--pages/categories/categories.wxml-->
+<view class='container'>
+  <view class='categoriesNav'>
+    <scroll-view scroll-y='true' class='categoriesNavList'>
+      <view class="categoriesNavBox {{activeIndex== index? 'active' : ''}}" data-index='{{index}}' bindtap='categoriesNav' wx:for-items='{{categories}}' data-id='{{item.id}}' wx:key='{{index}}'>{{item.name}}</view>
+    </scroll-view>
+  </view>
+  <view class='categoriesMain'>
+    <view class='searchBox'>
+      <image class='magnifier' src='/images/magnifier.png' />
+      <input class='searchInp' placeholder='搜索产品名称' bindconfirm='toSearch' value='{{inputVal}}' placeholder-class='searchInpP' />
+    </view>
+    <image class='categoriesBanner' src='{{pathHeader+banner}}' />
+    <view class='categoriesShow clearfix'>
+      <navigator class='categoriesBox' hover-class='none' wx:for-items='{{product}}' wx:key='{{index}}' url='/pages/productDetails/productDetails?id={{item.id}}'>
+        <image class='categoriesImg' src='{{pathHeader+item.thumbnail}}' />
+        <view class='productName'>{{item.product_name}}</view>
+      </navigator>
+    </view>
+  </view>
+</view>

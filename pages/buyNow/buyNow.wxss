@@ -1,0 +1,384 @@
+/* pages/buyNow/buyNow.wxss */
+
+.container {
+  padding-top: 18rpx;
+  padding-bottom: 80rpx;
+}
+
+.addAddress {
+  width: 100%;
+  height: 132rpx;
+  margin-bottom: 18rpx;
+  padding: 0 20rpx;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.addAddressImg {
+  float: left;
+  width: 48rpx;
+  height: 48rpx;
+  margin-top: 42rpx;
+}
+
+.addAddressTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 132rpx;
+  color: #333;
+  margin-left: 24rpx;
+}
+
+.addAddressArrow {
+  float: right;
+  width: 14rpx;
+  height: 26rpx;
+  margin-top: 53rpx;
+}
+
+.addressBox {
+  position: relative;
+  width: 100%;
+  height: auto;
+  margin-bottom: 18rpx;
+  padding: 20rpx 20rpx;
+  box-sizing: border-box;
+  background-color: #fff;
+}
+
+.addressLeft {
+  width: 690rpx;
+  height: auto;
+}
+
+.addressName {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 54rpx;
+  color: #333;
+}
+
+.addressTel {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 48rpx;
+  color: #7f7e7e;
+}
+
+.addressTxt {
+  width: 100%;
+  font-size: 24rpx;
+  line-height: 44rpx;
+  color: #7f7e7e;
+}
+
+.addressArrow {
+  position: absolute;
+  right: 20rpx;
+  top: 50%;
+  width: 14rpx;
+  height: 26rpx;
+  margin-top: -13rpx;
+}
+
+.productBox {
+  width: 100%;
+  height: 360rpx;
+  background-color: #fff;
+  /* margin-bottom: 20rpx; */
+  padding: 0 20rpx;
+}
+
+.productInfo {
+  width: 100%;
+  height: 258rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.productImgBox {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  margin-top: 40rpx;
+  border-radius: 6rpx;
+  overflow: hidden;
+}
+
+.productImgBox image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.productInfoRight {
+  float: left;
+  width: 538rpx;
+  height: 100%;
+  padding-top: 34rpx;
+  padding-left: 24rpx;
+}
+
+.productTitle {
+  font-size: 24rpx;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #1f1f20;
+  margin-bottom: 10rpx;
+}
+
+.productLabel {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+  margin-bottom: 22rpx;
+}
+
+.productPrice {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.productContent {
+  width: 100%;
+  height: 100rpx;
+  padding-top: 32rpx;
+}
+
+.productConBox {
+  width: 100%;
+  height: 48rpx;
+}
+
+.productConTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #7f7e7e;
+}
+
+.productConRight {
+  float: right;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #454444;
+}
+
+.margin1 {
+  margin-bottom: 64rpx;
+}
+
+.margin2 {
+  margin-bottom: 50rpx;
+}
+
+.productInp {
+  float: left;
+  width: 480rpx;
+  height: 48rpx;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #454444;
+  padding-left: 10rpx;
+}
+
+.productInfoBox {
+  width: 100%;
+  height: 188rpx;
+  background-color: #fff;
+  padding: 20rpx 20rpx;
+  border-bottom: 2rpx solid #ddd;
+}
+
+.productTotal {
+  width: 100%;
+  height: 100rpx;
+  background-color: #fff;
+  padding: 0 20rpx;
+  margin-bottom: 20rpx;
+}
+
+.productTotal text {
+  float: right;
+  font-size: 24rpx;
+  line-height: 100rpx;
+}
+
+.totalPrice {
+  color: #e01212;
+  margin-left: 16rpx;
+}
+
+.totalTxt {
+  color: #454444;
+  margin-left: 42rpx;
+}
+
+.totalQuantity {
+  color: #454444;
+}
+
+.buyBtn {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  color: #fff;
+  background-color: #d91e2d;
+  border-radius: 0;
+  z-index: 1000;
+}
+
+.offer {
+  width: 100%;
+  min-height: 404rpx;
+  background-color: #fff;
+  margin-top: 18rpx;
+  padding: 0 20rpx;
+}
+
+.offerTitleBox {
+  width: 100%;
+  height: 104rpx;
+  border-bottom: 2rpx solid #e0e0e0;
+  padding-top: 39rpx;
+}
+
+.offerTitle {
+  float: left;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #333;
+  border-left: 4rpx solid #e01212;
+  padding-left: 8rpx;
+}
+
+.offerTit {
+  float: left;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #7e7d7d;
+  margin-left: 12rpx;
+}
+
+.offerBox {
+  width: 100%;
+  height: auto;
+  margin-top: 40rpx;
+  margin-bottom: 20rpx;
+}
+
+.offerBox label {
+  display: block;
+  width: 100%;
+  height: 152rpx;
+}
+
+.offerChoose {
+  float: left;
+  width: 36rpx;
+  height: 36rpx;
+  margin-top: 68rpx;
+}
+
+.offerChoose .wx-radio-input {
+  width: 36rpx;
+  height: 36rpx;
+  box-sizing: border-box;
+  border-radius: 50%;
+  background-color: inherit;
+  border: 4rpx solid #d2d2d2;
+}
+
+.offerChoose .wx-radio-input.wx-radio-input-checked::before {
+  width: 52rpx;
+  height: 52rpx;
+  border: none;
+  line-height: 52rpx;
+  text-align: center;
+  font-size: 30rpx;
+  color: #fff;
+  background-color: #e01212;
+  border-radius: 50%;
+  margin-top: -2rpx;
+}
+
+.orderInfo {
+  float: right;
+  width: 646rpx;
+  height: 178rpx;
+  margin-bottom: 20rpx;
+}
+
+.orderImg {
+  float: left;
+  width: 172rpx;
+  height: 172rpx;
+  overflow: hidden;
+  border-radius: 6rpx;
+  margin-top: 6rpx;
+}
+
+.orderImg image {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.orderInfoCon {
+  float: left;
+  width: 472rpx;
+  height: 100%;
+  padding-left: 24rpx;
+}
+
+.orderTitle {
+  font-size: 24rpx;
+  height: 72rpx;
+  line-height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #1f1f20;
+  margin-bottom: 10rpx;
+}
+
+.orderLabel {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 46rpx;
+  color: #7f7e7e;
+  margin-bottom: 22rpx;
+}
+
+.orderPriceBox {
+  width: 100%;
+  height: 30rpx;
+}
+
+.orderPrice {
+  float: left;
+  font-size: 30rpx;
+  line-height: 30rpx;
+  color: #e01212;
+}
+
+.orderNumber {
+  float: right;
+  font-size: 24rpx;
+  line-height: 24rpx;
+  color: #999;
+}

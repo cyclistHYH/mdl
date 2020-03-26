@@ -1,0 +1,8 @@
+<!--pages/evaluation/success/success.wxml-->
+<view class='container'>
+  <image class='successBk' src='/images/commentSuccess.jpg' />
+  <view class='successBtn'>
+    <navigator class='toBack' url='/pages/index/index' open-type='switchTab'>返回首页</navigator>
+    <navigator class='toMy' url='/pages/myComment/myComment'>查看评论</navigator>
+  </view>
+</view>

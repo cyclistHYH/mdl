@@ -1,0 +1,25 @@
+<!--pages/comment/comment.wxml-->
+<view class='container'>
+  <!-- <view class='commentNav'>
+    <view class="commentNavBox {{commentActive==index? 'active' : ''}}" wx:for="{{commentNav}}" wx:key="{{index}}" data-index='{{index}}' bindtap='chooseComment'>{{item.name}}</view>
+  </view> -->
+  <view class='main'>
+    <view class='commentBox' wx:for="{{comment}}" wx:key='{{index}}'>
+      <view class='commentTop'>
+        <image class='commentAvatar' src='/images/avatar.png' />
+        <text class='commentName'>{{item.nikename}}</text>
+      </view>
+      <view class='commentTimeBox clearfix'>
+        <text class='commentTime'>{{item.evaluate_time}}</text>
+        <text class='commentLabel'>{{item.content}}</text>
+      </view>
+      <view class='commentTxt'>{{item.evaluate_content}}</view>
+      <view class='commentImg clearfix'>
+        <block wx:for="{{item.evaluate_img}}" wx:key='{{index}}' wx:for-item="evaluate_img">
+          <image src='{{pathHeader+evaluate_img}}' bindtap='previewImg' data-index='{{index}}' data-src='{{item.evaluate_img}}' />
+        </block>
+      </view>
+    </view>
+    <view class='noMore'>已经到底了~只能帮你到这里了！</view>
+  </view>
+</view>

@@ -1,0 +1,25 @@
+<!--pages/income/addCard/addCard.wxml-->
+<view class='container'>
+  <form bindsubmit='toConfirm'>
+    <view class='addCardBox'>
+      <view class='addCardTxt'>银行卡号</view>
+      <input class='addCardInp' name='bankNumber' placeholder='如：6585 5555 5888 7777' placeholder-class='addCardInpP'></input>
+    </view>
+    <view class='addCardBox'>
+      <view class='addCardTxt'>持卡人姓名</view>
+      <input class='addCardInp' name='bankName' placeholder='如：李由'  placeholder-class='addCardInpP'></input>
+    </view>
+    <view class='addCardBox'>
+      <view class='addCardTxt'>开户银行</view>
+      <view class='chooseBox'>
+        <input class="addCardInp" name='bankAccount' placeholder='请填写开户行银行'  placeholder-class='addCardInpP'></input>
+      </view>
+    </view>
+    <view class='addCardBox'>
+      <view class='addCardTxt'>开户手机号码</view>
+      <input class='addCardInp' name='bankPhone' placeholder='请填写开户手机号码' placeholder-class='addCardInpP' type='number'></input>
+    </view>
+
+    <button class='confirmBtn' form-type='submit'>提交</button>
+  </form>
+</view>

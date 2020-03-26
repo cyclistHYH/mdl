@@ -1,0 +1,31 @@
+<!--pages/income/bankCard/bankCard.wxml-->
+<view class='container'>
+  <navigator class='bankCardTop' hover-class='none' hidden='{{isNull}}' url='/pages/income/addCard/addCard'>
+    <image class='bankCardTopImg' src='/images/cardAdd.png' />
+    <text class='bankCardTopTxt'>去添加银行卡></text>
+  </navigator>
+  <navigator class='bankCardTop' hover-class='none' hidden='{{!isNull}}' url='/pages/income/cardList/cardList?id={{cardList.id}}'>
+    <view class='bankCardTopCon'>
+      <view class='bankName'>{{cardList.open_bank}}</view>
+      <view class='bankNumber'>{{cardList.bankcard_numbers}}</view>
+    </view>
+    <text class='bankCardTopTxt'>更换银行卡></text>
+  </navigator>
+
+  <view class='changeContent'>
+    <view class='changeTitle'>提现金额</view>
+    <view class='inputBox'>
+      <text class='inputBoxTxt'>￥</text>
+      <input class='numberInp' type='digit' bindinput="numberInp"></input>
+    </view>
+    <view class='changeBalance'>账户余额 <view>{{balance}}元</view></view>
+  </view>
+  <view class='withdrawBtn' bindtap="withdrawBtn">立即提现</view>
+</view>
+
+<view class='popUpBk' hidden='{{isSuccess}}'></view>
+<view class='successPopUp' hidden='{{isSuccess}}'>
+  <image class='successBk' src='/images/withdrawPopBk.png' />
+  <text class='successTxt'>提现申请发起成功，银行处理中！</text>
+  <button class='closePopUp' bindtap='closePopUp'>确定</button>
+</view>

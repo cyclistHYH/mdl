@@ -1,0 +1,21 @@
+<view class='container'>
+  <view class="shareTitle">我的分享</view>
+  <view class="superiorBox">
+    <view class="superiorTitle">分享给我的</view>
+    <view class="superiorCon">
+      <view class="superiorConTit">分享人名称:</view>
+      <view class="superiorConTxt">{{userInfo.superior_user.nikename}}</view>
+    </view>
+    <view class="superiorCon">
+      <view class="superiorConTit">手机号:</view>
+      <view class="superiorConTxt">{{userInfo.superior_user.mobile}}</view>
+    </view>
+  </view>
+  <view class="superiorBox" style="height: 222rpx;">
+    <view class="superiorTitle">我的分享人</view>
+    <view class="superiorCon">
+      <view class="superiorConTit">推荐人数:</view>
+      <view class="superiorConTxt">{{userInfo.subordinate}}人</view>
+    </view>
+  </view>
+</view>

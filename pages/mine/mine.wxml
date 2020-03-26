@@ -1,0 +1,86 @@
+<!--pages/mine/mine.wxml-->
+<view class='container'>
+  <view class='mineTop'>
+    <image class='mineTopBk' src='/images/mineBk.png' />
+    <view class='mineTopBox'>
+      <image class='avatarBk' src='/images/avatarBk.png' />
+      <image class='mineAvatar' src='{{avatar}}' />
+      <text class='mineNickname'>{{nickName}}</text>
+      <view class="toLogin" bindtap="loginBtn" hidden="{{isLogin}}">登录</view>
+      <view class='memberLevel' wx:if="{{mineInfo.membership_level==0}}">
+        <view class='memberLevelBk'>
+          <view class='memberLevelBox'>普通用户</view>
+        </view>
+      </view>
+      <view class="member" wx:if="{{mineInfo.membership_level==1}}">
+        <view class="memberBk">
+          <view class="memberBox1">{{membershipName}}</view>
+        </view>
+      </view>
+      <view class='member' wx:if="{{mineInfo.membership_level==2 ||mineInfo.membership_level==3}}">
+        <view class='memberBk'>
+          <view class='memberBox'>{{membershipName}}</view>
+          <image class='memberImg' wx:if='{{mineInfo.membership_level==3}}' src='/images/member.png' />
+          <image class='memberImg' wx:if='{{mineInfo.membership_level==2}}' src='/images/member1.png' />
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class='mineMain' hidden="{{!isLogin}}">
+    <view class='mineOrderNav'>
+      <navigator class='mineOrderTop' hover-class='none' url='/pages/myOrder/myOrder?id=all'>
+        <text>我的订单</text>
+        <image src='/images/arrowRight.png' />
+      </navigator>
+      <view class='mineOrderNavList'>
+        <navigator class='mineOrderNavBox' wx:for-items="{{orderNav}}" wx:key='{{index}}' url='/pages/myOrder/myOrder?id={{item.id}}' hover-class='none'>
+          <image class='mineOrderImg' src='{{item.img}}' />
+          <text class='mineOrderTxt'>{{item.name}}</text>
+          <view class='mineOrderPrompt' wx:if='{{item.number>0}}'>{{item.number}}</view>
+        </navigator>
+      </view>
+    </view>
+    <view class='mineNav'>
+      <view class='mineNavBox' bindtap="toMyCode" data-id="{{mineInfo.user_id}}">
+        <image class='mineNavImg' src='/images/mineNavImg1.png' />
+        <text class='mineNavTxt'>我的邀请码</text>
+        <image class='mineNavArrow' src='/images/arrowRight.png' />
+      </view>
+      <navigator class='mineNavBox' hover-class='none' url='/pages/income/income' wx:if="{{mineInfo.membership_level!=0}}">
+        <image class='mineNavImg' src='/images/mineNavImg2.png' />
+        <text class='mineNavTxt'>我的收益</text>
+        <image class='mineNavArrow' src='/images/arrowRight.png' />
+      </navigator>
+      <navigator class='mineNavBox' hover-class='none' url='/pages/exchange/exchange' wx:if="{{mineInfo.membership_level!=0}}">
+        <image class='mineNavImg' src='/images/mineNavImg3.png' />
+        <text class='mineNavTxt'>产品兑换</text>
+        <image class='mineNavArrow' src='/images/arrowRight.png' />
+      </navigator>
+      <navigator class='mineNavBox' hover-class='none' url='/pages/helpCenter/helpCenter'>
+        <image class='mineNavImg' src='/images/mineNavImg4.png' />
+        <text class='mineNavTxt'>热点问题</text>
+        <image class='mineNavArrow' src='/images/arrowRight.png' />
+      </navigator>
+      <navigator class='mineNavBox' hover-class='none' wx:if="{{mineInfo.membership_level!=0}}" url="/pages/myShare/myShare">
+        <image class='mineNavImg' src='/images/mineNavImg5.png' />
+        <text class='mineNavTxt'>我的分享人</text>
+        <image class='mineNavArrow' src='/images/arrowRight.png' />
+      </navigator>
+    </view>
+  </view>
+  <view class="mineMain" hidden="{{isLogin}}">
+    <view class='mineOrderNav'>
+      <view class='mineOrderTop' bindtap="toRemind">
+        <text>我的订单</text>
+        <image src='/images/arrowRight.png' />
+      </view>
+      <view class='mineOrderNavList'>
+        <view class='mineOrderNavBox' wx:for-items="{{orderNav}}" wx:key='{{index}}'  bindtap="toRemind">
+          <image class='mineOrderImg' src='{{item.img}}' />
+          <text class='mineOrderTxt'>{{item.name}}</text>
+          <view class='mineOrderPrompt' wx:if='{{item.number>0}}'>{{item.number}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

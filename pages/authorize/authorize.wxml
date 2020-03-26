@@ -1,0 +1,7 @@
+<view class="container">
+    <image class='authorizeLogo' src='/images/authorizeLogo.jpg' />
+    <view class='authorizeTxt'>确认授权信息</view>
+    <view class='authorizeTit'><view>·</view>获取你的信息（头像，昵称等）</view>
+    <button class='authorizeBtn' open-type='getUserInfo' bindgetuserinfo='bindGetUserInfo'>确认授权</button>
+    <navigator class="cancelBtn" open-type="switchTab" url="/pages/index/index" hover-class="none">暂不登录</navigator>
+</view>

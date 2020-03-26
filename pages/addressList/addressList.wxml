@@ -1,0 +1,23 @@
+<!--pages/addressList/addressList.wxml-->
+<wxs src="../../wxs/subutil.wxs" module="tools" />
+
+<view class='container'>
+  <view class='main'>
+    <view class='addressList' data-id="{{item.address_id}}" bindtap="chooseBtn" wx:for="{{addressList}}" wx:key='{{index}}'>
+      <view class='addressBox'>
+        <view class='addressTop'>
+          <text class='addressName'>{{item.consignee}}</text>
+          <text class='addressTel'>{{item.mobile}}</text>
+        </view>
+        <view class='addressCon'><view class='isDefault' wx:if='{{item.is_default}}'>默认</view>{{item.province}}{{item.city}}{{item.district}}{{item.address}}</view>
+      </view>
+      <view class='addressAvatar'>{{tools.sub(item.consignee)}}</view>
+      <view class='toModify' catchtap="modifyBtn" data-id="{{item.address_id}}">编辑</view>
+    </view>
+    <navigator class='toAdd' url='/pages/addAddress/addAddress' hover-class='none'>
+      <image class='toAddImg' src='/images/addImg1.png' />
+      <view class='toAddTxt'>新增收货地址</view>
+      <image class='toAddArrow' src='/images/addArrow.png' />
+    </navigator>
+  </view>
+</view>

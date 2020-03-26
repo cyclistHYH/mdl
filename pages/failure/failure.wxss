@@ -1,0 +1,34 @@
+/* pages/failure/failure.wxss */
+.container {
+  min-height: 100vh;
+  background-color: #fff;
+}
+
+.failureBk {
+  display: block;
+  width: 100%;
+  height: 442rpx;
+}
+
+.failureTxt {
+  display: inline-block;
+  width: 100%;
+  padding: 0 20rpx;
+  font-size: 30rpx;
+  line-height: 48rpx;
+  text-align: center;
+  color: #1f1f20;
+}
+
+.toBack {
+  display: block;
+  width: 330rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 78rpx;
+  text-align: center;
+  color: #8d8d8d;
+  border: 1rpx solid #bfbfbf;
+  border-radius: 4rpx;
+  margin: 72rpx auto 0;
+}

@@ -1,0 +1,30 @@
+<!--pages/income/detail/detail.wxml-->
+<view class='container'>
+  <view class='detailTop'>
+    <view class="dataBox">
+      <picker class="dataChoose" mode='date' start="2019-07" fields='month' bindchange="bindDateChange">
+        <view class="dataCon">{{date}}</view>
+        <image class="dataImg" src="/images/triangle.png" />
+      </picker>
+    </view>
+    <view class='detailTopInfo'>
+      <view class='detailTopInfoTxt'>收益 ￥{{income}}</view>
+      <view class='detailTopInfoTxt'>支出 ￥{{withdraw}}</view>
+    </view>
+  </view>
+  <view class='main'>
+    <view class='detailBox clearfix' wx:for="{{detailList}}" wx:key="{{index}}">
+      <view class='detailLeft black' wx:if="{{item.type=='提现到银行卡'}}">提</view>
+      <view class='detailLeft green' wx:elif="{{item.type==1}}">提</view>
+      <view class='detailLeft red' wx:elif="{{item.type=='返利'}}">收</view>
+      <view class='detailContent'>
+        <view class='detailTxt'>{{item.content}}</view>
+        <view class='detailTime'>{{item.create_time}}</view>
+      </view>
+      <view class='detailRight'>
+        <view class='detailRightTxt'>￥{{item.money}}</view>
+        <view class="detailRightTxt {{item.status=='成功' ? 'colorBlue' : ''}} {{item.status=='处理中' || item.status=='已到账' ? 'colorRed' : ''}}">{{item.status}}</view>
+      </view>
+    </view>
+  </view>
+</view>

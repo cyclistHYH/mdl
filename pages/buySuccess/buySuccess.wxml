@@ -1,0 +1,10 @@
+<!--pages/buySuccess/buySuccess.wxml-->
+<view class='container'>
+  <image class='buySuccessBk' src='/images/buySuccess.jpg' />
+  <view class='successTxt'>恭喜您</view>
+  <view class='successTxt'>本次订单支付成功 <text>￥{{money}}</text></view>
+  <view class='btnBox'>
+    <navigator class='checkOrder' hover-class='none' url='/pages/orderDetails/orderDetails?id={{orderId}}'>查看订单</navigator>
+    <navigator class='toBack' hover-class='none' open-type='switchTab' url='/pages/index/index'>返回首页</navigator>
+  </view>
+</view>

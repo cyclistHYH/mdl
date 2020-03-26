@@ -1,0 +1,45 @@
+/* pages/evaluation/success/success.wxss */
+page {
+  height: 100%;
+}
+
+.container {
+  height: 100%;
+  background-color: #fff;
+}
+
+.successBk {
+  display: block;
+  width: 100%;
+  height: 686rpx;
+}
+
+.successBtn {
+  width: 100%;
+  height: 80rpx;
+  padding: 0 20rpx;
+}
+
+.toBack {
+  float: left;
+  width: 330rpx;
+  height: 80rpx;
+  font-size: 30rpx;
+  line-height: 80rpx;
+  text-align: center;
+  background-color: #d91e2d;
+  border-radius: 6rpx;
+  color: #fff;
+}
+
+.toMy {
+  float: right;
+  width: 330rpx;
+  height: 80rpx;
+  box-sizing: border-box;
+  font-size: 30rpx;
+  line-height: 78rpx;
+  text-align: center;
+  border: 1rpx solid #bfbfbf;
+  color: #8d8d8d;
+}

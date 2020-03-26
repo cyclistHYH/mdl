@@ -1,0 +1,79 @@
+<!--pages/exchangeOrder/exchangeOrder.wxml-->
+<!--pages/buyNow/buyNow.wxml-->
+<view class='container'>
+  <navigator class='addAddress' hover-class='none' url='/pages/addAddress/addAddress' wx:if='{{addressShow}}'>
+    <image class='addAddressImg' src='/images/addImg.png' />
+    <text class='addAddressTxt'>新增收货地址</text>
+    <image class='addAddressArrow' src='/images/addArrow.png' />
+  </navigator>
+
+  <navigator class='addressBox' url='/pages/addressList/addressList?isBuynow=false' wx:for='{{address}}' wx:key='*this' hover-class='none' wx:if='{{!addressShow}}'>
+    <view class='addressLeft'>
+      <view class='addressName'>{{item.consignee}}</view>
+      <view class='addressTel'>{{item.mobile}}</view>
+      <view class='addressTxt'>{{item.province}} {{item.city}} {{item.district}} {{item.address}}</view>
+    </view>
+    <image class='addressArrow' src='/images/addArrow.png' />
+  </navigator>
+
+  <view class='productBox' wx:for='{{productList}}' wx:key='{{index}}'>
+    <view class='productInfo'>
+      <view class='productImgBox'>
+        <image src='{{pathHeader+item.thumbnail}}' />
+      </view>
+      <view class='productInfoRight'>
+        <view class='productTitle'>{{item.product_name}}</view>
+        <view class='productLabel'>{{item.name}}:{{item.opt_text}}</view>
+      </view>
+    </view>
+    <view class='productContent'>
+      <view class='productNumBox margin1'>
+        <view class='productConTxt1'>购买数量</view>
+        <view class='numberPlus' bindtap='numberPlus'>+</view>
+        <input class='numberShow' type='number' value='{{product_number}}' disabled />
+        <view class='numberLess' bindtap='numberLess'>-</view>
+      </view>
+      <view class='productConBox margin2'>
+        <view class='productConTxt'>运费</view>
+        <view class='productConRight'>￥{{item.postage}}</view>
+      </view>
+      <view class='productConBox'>
+        <view class='productConTxt'>买家留言:</view>
+        <input class='productInp' data-index='{{index}}' placeholder='选填，前填写留言' value='{{remarksCon}}' bindinput='messageInp'></input>
+      </view>
+    </view>
+  </view>
+
+  <view class='offer'>
+    <view class='offerTitleBox'>
+      <view class='offerTitle'>本单可享优惠商品</view>
+      <view class='offerTit'>(仅单选)</view>
+    </view>
+    <radio-group class='offerBox clearfix' bindchange='chooseOffer'>
+      <label wx:for="{{offer}}" wx:key="{{index}}" bindtap="choose">
+        <radio class='offerChoose' value="{{item.id}}" checked="{{item.checked}}"></radio>
+        <view class='orderInfo'>
+          <view class='orderImg'>
+            <image src='{{pathHeader+item.thumbnail}}' />
+          </view>
+          <view class='orderInfoCon'>
+            <view class='orderTitle'>{{item.product_name}}</view>
+            <view class='orderLabel'>{{item.opt_text}}</view>
+            <view class='orderPriceBox'>
+              <view class='orderPrice'>￥{{item.opt_price}}</view>
+              <view class='orderNumber'>库存{{item.stock}}件</view>
+            </view>
+          </view>
+        </view>
+      </label>
+    </radio-group>
+  </view>
+
+  <view class='productTotal'>
+    <text class='totalPrice'>￥{{totalPrice}}</text>
+    <text class='totalTxt'>合计:</text>
+    <text class='totalQuantity'>共计{{totalQuantity}}件商品</text>
+  </view>
+</view>
+
+<button class='buyBtn' bindtap='toBuy' hover-class='none'>立即购买</button>

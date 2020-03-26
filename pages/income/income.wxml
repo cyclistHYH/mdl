@@ -1,0 +1,62 @@
+<!--pages/income/income.wxml-->
+<import src="../../wxParse/wxParse.wxml" />
+
+<view class='container'>
+  <view class='incomeTop'>
+    <view class='incomeTitle'>账户余额（元）</view>
+    <view class='incomeNumber'>
+      <view class='incomeNumberTxt'>￥</view>
+      <view class='incomeNumberCon'>{{incomeInfo.income}}</view>
+    </view>
+    <button class='toWithdraw' bindtap='toWithdraw'>申请提现</button>
+  </view>
+  <view class='exchangeInfo'>
+    <view class='exchangeInfoBox'>
+      <view class='exchangeInfoTxt'>累计收益</view>
+      <view class='exchangeInfoNum'>￥{{incomeInfo.earnings}}</view> 
+    </view>
+    <view class='exchangeInfoLine'></view>
+    <view class='exchangeInfoBox'>
+      <view class='exchangeInfoTxt'>累计提现</view>
+      <view class='exchangeInfoNum'>￥{{incomeInfo.withdraw}}</view>
+    </view>
+  </view>
+  <navigator class='incomeBox' url='/pages/income/detail/detail?income={{incomeInfo.earnings}}&withdraw={{incomeInfo.withdraw}}'>
+    <image class='incomeImg' src='/images/income.png' />
+    <text class='incomeTxt'>收益明细</text>
+    <image class='incomeArrow' src='/images/arrowRight.png' />
+  </navigator>
+  <view class='incomeBox' bindtap='toShow'>
+    <image class='descriptionImg' src='/images/exchangeDescription.png' />
+    <text class='incomeTxt'>提现说明</text>
+    <image class='incomeArrow' src='/images/arrowRight.png' />
+  </view>
+</view>
+
+<view class='popUpBk' hidden='{{isRemind}}'></view>
+<view class='remind' hidden='{{isRemind}}'>
+  <view class='popUpTop'>提现说明</view> 
+  <template is="wxParse" data="{{wxParseData:description.nodes}}"/>
+  <image class='toClose' catchtap='toCloseRemind' src='/images/close1.png' />
+</view>
+
+<view class='popUpBk' hidden='{{isWithdraw}}'></view>
+<view class='withdraw' hidden='{{isWithdraw}}'>
+  <view class='withdrawTop'>
+    <image class='withdrawBk' src='/images/withdrawBk.png' />
+    <view class='withdrawTopCon'>申请提现至？</view>
+  </view>
+  <view class='withdrawCon'>
+    <navigator class='withdrawBox' hover-class='none' url='/pages/income/bankCard/bankCard'>
+      <image class='withdrawImg' src='/images/withdrawImg1.png' />
+      <text>银行卡提现</text>
+      <image class='withdrawArrow' src='/images/arrowRight.png' />
+    </navigator>
+    <navigator class='withdrawBox' hover-class='none' url='/pages/income/change/change'>
+      <image class='withdrawImg' src='/images/withdrawImg2.png' />
+      <text>微信零钱提现</text>
+      <image class='withdrawArrow' src='/images/arrowRight.png' />
+    </navigator>
+  </view>
+  <image class='toClose' catchtap='closeWithdraw' src='/images/close1.png' />
+</view>

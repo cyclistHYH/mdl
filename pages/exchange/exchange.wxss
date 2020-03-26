@@ -1,0 +1,133 @@
+/* pages/exchange/exchange.wxss */
+@import "../../wxParse/wxParse.wxss";
+
+.exchangeTop {
+  position: relative;
+  width: 100%;
+  height: 306rpx;
+}
+
+.exchangeBk {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.exchangeTopCon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 100;
+  padding-top: 36rpx;
+}
+
+.exchangeAvatar {
+  display: block;
+  width: 172rpx;
+  height: 172rpx;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.nickname {
+  width: 100%;
+  font-size: 30rpx;
+  line-height: 78rpx;
+  color: #fff;
+  text-align: center;
+}
+
+.exchangeDescription {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  background-color: #fff;
+  padding: 0 20rpx;
+}
+
+.exchangeDescriptionImg,.exchangeImg {
+  float: left;
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 28rpx;
+}
+
+.exchangeDescriptionTxt,.exchangeTxt {
+  float: left;
+  font-size: 28rpx;
+  line-height: 98rpx;
+  color: #333;
+  margin-left: 20rpx;
+}
+
+.exchangeDescriptionArrow,.exchangeArrow {
+  float: right;
+  width: 14rpx;
+  height: 24rpx;
+  margin-top: 37rpx;
+}
+
+.exchangeBox {
+  width: 100%;
+  height: 100rpx;
+  border-bottom: 2rpx solid #e5e5e5;
+  background-color: #fff;
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+
+.popUpBk {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.6);
+  z-index: 1000;
+}
+
+.popUp {
+  position: fixed;
+  top: 50%;
+  left: 40rpx;
+  width: 670rpx;
+  height: 536rpx;
+  border-radius: 8rpx;
+  background-color: #fff;
+  z-index: 1000;
+  margin-top: -268rpx;
+}
+
+.popUpTop {
+  width: 100%;
+  height: 158rpx;
+  font-size: 36rpx;
+  line-height: 158rpx;
+  text-align: center;
+  color: #fff;
+  background: linear-gradient(to right,#e01212,#fd4303);
+}
+
+/* .popUpCon {
+  width: 100%;
+  height: 378rpx;
+  padding: 42rpx 94rpx 0;
+}
+
+.popUpTxt {
+  width: 100%;
+  font-size: 28rpx;
+  line-height: 48rpx;
+  color: #000;
+} */
+
+.toClose {
+  position: absolute;
+  top: 24rpx;
+  right: 24rpx;
+  width: 36rpx;
+  height: 36rpx;
+  z-index: 1100;
+}

@@ -1,0 +1,35 @@
+/**app.wxss**/
+page {
+  min-height: 100%;
+  background-color: #f1f0f2;
+}
+
+view {
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  box-sizing: border-box;
+}
+
+
+.clearfix:after{
+    display:block;
+    clear:both;
+    content:"";
+    visibility:hidden;
+    height:0
+}
+
+.clearfix{
+    zoom:1;
+}
+
+::-webkit-scrollbar {
+    width: 6rpx;
+    height: 6rpx;
+}

@@ -1,0 +1,39 @@
+<!--index.wxml-->
+<view class="container">
+  <view class='swiper-container'>
+    <swiper class='swiper-box' autoplay='autoplay' interval='5000' circular='true' bindchange='swiperChange' duration='500' indicator-color='#fff'>
+      <block wx:for="{{banner}}" wx:key="{{item.id}}">
+        <swiper-item>
+          <image class='slide-img' data-id='{{item.brinding_pro}}' bindtap='toJump' src='{{pathHeader+item.url}}' />
+        </swiper-item>
+      </block>
+    </swiper>
+    <view class='dots'>
+      <block wx:for="{{banner}}" wx:key="{{item.id}}">
+        <view class="dot {{index == swiperCurrent ? 'active' : ''}}"></view>
+      </block>
+    </view>
+  </view>
+  <view class='main'>
+    <!-- <view class='searchBox'>
+      <image class='magnifier' src='/images/magnifier.png' />
+      <input class='searchInp' placeholder='搜索产品名称' bindconfirm='toSearch' placeholder-class='searchInpP' value='{{inputVal}}' />
+    </view> -->
+    <image class='openVip' src='{{pathHeader+vipImg}}' />
+    <image class='indexTitle' src='/images/indexTitle.png' />
+    <view class='commodity clearfix'>
+      <navigator class='commodityBox' wx:for-items="{{commodity}}" wx:key="{{item.id}}" hover-class='none' url='/pages/productDetails/productDetails?id={{item.id}}'>
+        <image class='commodityImg' src='{{pathHeader+item.thumbnail}}' />
+        <view class='commodityContent'>
+          <view class='commodityName'>{{item.product_name}}</view>
+          <view class='commodityTxt'>{{item.comment}}</view>
+          <view class='priceBox'>
+            <text class='priceCurrent'>¥{{item.current_price}}</text>
+            <text class='discount'>({{item.discount}}折)</text>
+            <text class='priceOriginal'>¥{{item.original_price}}</text>
+          </view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+</view>

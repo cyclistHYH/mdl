@@ -1,0 +1,44 @@
+<!--pages/shop-cart/shop-cart.wxml-->
+<view class='container'>
+  <view class='empty' hidden='{{isEmpty}}'>
+    <image class='emptyBk' src='/images/emptyShop.jpg' />
+    <navigator class='toChoose' open-type="switchTab" url="/pages/categories/categories">去选购</navigator>
+  </view>
+
+  <view hidden='{{!isEmpty}}'>
+    <form bindsubmit='buySubmit'>
+      <view class='shopCartTop'>
+        <view class="chooseAll {{isAllChoose ? 'active' : ''}}" bindtap='chooseAll'></view>
+        <view class='chooseAllTxt'>全选</view>
+        <text class='toEmpty' catchtap="emptyBtn">删除</text>
+      </view>
+      <view class="cartContent">
+        <view class='goodsBox' wx:for-items="{{goods}}" wx:key='index'>
+          <view class="choose {{item.isChecked ? 'active' : ''}}" data-index='{{index}}' bindtap='goodsChoose'></view>
+          <view class='goodsImg'>
+            <image src='{{pathHeader + item.thumbnail}}'/>
+          </view>
+          <view class='goodsContent'>
+            <view class='goodsName'>{{item.product_name}}</view>
+            <view class='labelShow'>
+              <view class='labelBox'>
+                <text class='label'>{{item.opt_text}}</text>
+                <!-- <image class='labelArrow' src='/images/arrowDown.png' /> -->
+              </view>
+            </view>
+            <view class='goodsPrice'>￥{{item.price}}</view>
+          </view>
+          <view class='numberBox'>
+            <view class='numberPlus' data-index='{{index}}' bindtap='numberPlus'>+</view>
+            <input class='numberShow' type='number' value='{{item.product_number}}' disabled />
+            <view class='numberLess' data-index='{{index}}' bindtap='numberLess'>-</view>
+          </view>
+        </view>
+      </view>
+      <view class='shopBottom'>
+        <view class='totalPrice'>合计：￥{{totalPrice}}</view>
+        <button class='buyBtn' form-type='submit'>立即购买</button>
+      </view>
+    </form>
+  </view>
+</view>

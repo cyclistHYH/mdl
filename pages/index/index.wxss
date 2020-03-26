@@ -1,0 +1,188 @@
+/**index.wxss**/
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 350rpx;
+  overflow: hidden;
+}
+
+.swiper-box {
+  width: 100%;
+  height: 100%;
+}
+
+.slide-img {
+  width: 100%;
+  height: 100%;
+}
+
+.dots {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 18rpx;
+  display: flex;
+  justify-content: center;
+}
+
+.dots .dot {
+  margin: 0 7rpx;
+  width: 10rpx;
+  height: 10rpx;
+  background: #fff;
+  border-radius: 50%;
+  transition: all .3s;
+}
+
+.dots .dot.active {
+  width: 28rpx;
+  border-radius: 4rpx;
+}
+
+.main {
+  position: relative;
+  width: 100%;
+  height: auto;
+  z-index: 100;
+  padding-top: 18rpx;
+}
+
+/* .searchBox {
+  width: 710rpx;
+  height: 78rpx;
+  background: #fff;
+  border-radius: 6rpx;
+  box-shadow: 6rpx 6rpx 10rpx rgba(244, 18, 18, 0.22);
+  margin: 0 auto 20rpx;
+}
+
+.magnifier {
+  float: left;
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 32rpx;
+  margin-top: 19rpx;
+}
+
+.searchInp {
+  float: left;
+  width: 636rpx;
+  height: 100%;
+  padding: 0 20rpx;
+  font-size: 28rpx;
+  line-height: 78rpx;
+  color: #333;
+  box-sizing: border-box;
+}
+
+.searchInpP {
+  font-size: 28rpx;
+  line-height: 78rpx;
+  color: #ababab;
+} */
+
+.openVip {
+  display: block;
+  width: 710rpx;
+  height: 180rpx;
+  margin: 0 auto;
+  border-radius: 6rpx;
+}
+
+.indexTitle {
+  display: block;
+  width: 100%;
+  height: 68rpx;
+}
+
+.commodity {
+  width: 100%;
+  height: auto;
+}
+
+.commodityBox:nth-child(2n-1) {
+  float: left;
+}
+
+.commodityBox:nth-child(2n) {
+  float: right;
+}
+
+.commodityBox {
+  width: 366rpx;
+  height: 470rpx;
+  background-color: #fff;
+  margin-bottom: 18rpx;
+}
+
+.commodityImg {
+  display: block;
+  width: 366rpx;
+  height: 316rpx;
+}
+
+.commodityContent {
+  width: 100%;
+  height: 154rpx;
+  padding: 6rpx 40rpx 0;
+}
+
+.commodityName {
+  width: 100%;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  font-weight: 700;
+  height: 36rpx;
+  display: -webkit-box;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+  color: #383838;
+}
+
+.commodityTxt {
+  width: 100%;
+  font-size: 22rpx;
+  line-height: 36rpx;
+  height: 36rpx;
+  color: #ababab;
+   display: -webkit-box;
+  -webkit-line-clamp:1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  word-break: break-all;
+}
+
+.priceBox {
+  width: 100%;
+  height: 36rpx;
+  margin-top: 18rpx;
+}
+
+.priceCurrent {
+  float: left;
+  font-size: 26rpx;
+  line-height: 36rpx;
+  color: #e01212;
+  font-weight: 700;
+}
+
+.discount {
+  float: left;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color: #e01212;
+  margin-left: 8rpx;
+}
+
+.priceOriginal {
+  float: left;
+  font-size: 20rpx;
+  line-height: 36rpx;
+  color: #ababab;
+  text-decoration: line-through;
+  margin-left: 8rpx;
+}
